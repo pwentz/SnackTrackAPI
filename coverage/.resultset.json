@@ -1,0 +1,58 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/models/ingredient.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/models/pantry_ingredient.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/models/pantry.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/controllers/application_controller.rb": [
+        0,
+        0
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/jobs/application_job.rb": [
+        0,
+        0
+      ]
+    },
+    "timestamp": 1473729390
+  }
+}
