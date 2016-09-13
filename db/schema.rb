@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913003402) do
+ActiveRecord::Schema.define(version: 20160917173504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,24 +20,19 @@ ActiveRecord::Schema.define(version: 20160913003402) do
     t.text "image"
   end
 
-  create_table "pantries", force: :cascade do |t|
+  create_table "user_ingredients", force: :cascade do |t|
     t.integer "user_id"
-    t.index ["user_id"], name: "index_pantries_on_user_id", using: :btree
-  end
-
-  create_table "pantry_ingredients", force: :cascade do |t|
-    t.integer "pantry_id"
     t.integer "ingredient_id"
     t.integer "quantity"
-    t.index ["ingredient_id"], name: "index_pantry_ingredients_on_ingredient_id", using: :btree
-    t.index ["pantry_id"], name: "index_pantry_ingredients_on_pantry_id", using: :btree
+    t.index ["ingredient_id"], name: "index_user_ingredients_on_ingredient_id", using: :btree
+    t.index ["user_id"], name: "index_user_ingredients_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
+    t.text   "google_id"
   end
 
-  add_foreign_key "pantries", "users"
-  add_foreign_key "pantry_ingredients", "ingredients"
-  add_foreign_key "pantry_ingredients", "pantries"
+  add_foreign_key "user_ingredients", "ingredients"
+  add_foreign_key "user_ingredients", "users"
 end
