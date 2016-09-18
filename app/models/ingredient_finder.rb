@@ -10,6 +10,7 @@ class IngredientFinder
 
   def fetch_ingredients
     cached_results = Ingredient.find_by_name(search_terms)
+    # USE INGREDIENTS ALREADY IN DB TO LIMIT API CALLS
     if cached_results.count <= 5
       cached_results
     else
@@ -21,6 +22,7 @@ class IngredientFinder
     raw_ingredients = auto_complete_service.
                             autocomplete_call(search_terms)
     Ingredient.create_by_collection(raw_ingredients)
+    Ingredient.find_by_name(search_terms)
   end
 
   def self.fetch_ingredients(search_terms)

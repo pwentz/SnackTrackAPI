@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160917173504) do
+ActiveRecord::Schema.define(version: 20160918183927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,12 +20,28 @@ ActiveRecord::Schema.define(version: 20160917173504) do
     t.text "image"
   end
 
-  create_table "user_ingredients", force: :cascade do |t|
+  create_table "pantry_ingredients", force: :cascade do |t|
     t.integer "user_id"
     t.integer "ingredient_id"
-    t.integer "quantity"
-    t.index ["ingredient_id"], name: "index_user_ingredients_on_ingredient_id", using: :btree
-    t.index ["user_id"], name: "index_user_ingredients_on_user_id", using: :btree
+    t.text    "unit"
+    t.integer "amount"
+    t.index ["ingredient_id"], name: "index_pantry_ingredients_on_ingredient_id", using: :btree
+    t.index ["user_id"], name: "index_pantry_ingredients_on_user_id", using: :btree
+  end
+
+  create_table "recipe_ingredients", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.integer "ingredient_id"
+    t.integer "amount"
+    t.text    "unit"
+    t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id", using: :btree
+    t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id", using: :btree
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.text    "title"
+    t.integer "ready_time"
+    t.text    "image"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,6 +49,8 @@ ActiveRecord::Schema.define(version: 20160917173504) do
     t.text   "google_id"
   end
 
-  add_foreign_key "user_ingredients", "ingredients"
-  add_foreign_key "user_ingredients", "users"
+  add_foreign_key "pantry_ingredients", "ingredients"
+  add_foreign_key "pantry_ingredients", "users"
+  add_foreign_key "recipe_ingredients", "ingredients"
+  add_foreign_key "recipe_ingredients", "recipes"
 end
