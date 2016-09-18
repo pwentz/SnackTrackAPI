@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :user_ingredients
-  has_many :ingredients, through: :user_ingredients
+  has_many :pantry_ingredients
+  has_many :ingredients, through: :pantry_ingredients
   validates :google_id, presence: true, uniqueness: true
 
   def self.find_or_create(user_params)

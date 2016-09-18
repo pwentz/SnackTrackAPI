@@ -1,8 +1,12 @@
-class UserIngredientSerializer < ActiveModel::Serializer
-  attributes :quantity
+class PantryIngredientSerializer < ActiveModel::Serializer
+  attributes :amount
   attribute :ingredient_name, key: :name
   attribute :ingredient_image, key: :image
+  attribute :ingredient_id, key: :id
 
+  def ingredient_id
+    object.ingredient.id
+  end
 
   def ingredient_name
     object.ingredient.name
