@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   post '/api/v1/users/sign_in', to: 'api/v1/users#create', as: 'users'
 
   post '/api/v1/pantry_ingredients/:ingredient_id', to: 'api/v1/pantry_ingredients#create', as: 'pantry_ingredients'
-
   delete '/api/v1/pantry_ingredients/:ingredient_id', to: 'api/v1/pantry_ingredients#destroy', as: 'pantry_ingredient'
+  patch '/api/v1/pantry_ingredients', to: 'api/v1/pantry_ingredients#update'
 end

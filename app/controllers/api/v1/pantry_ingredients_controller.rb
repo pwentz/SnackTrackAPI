@@ -18,4 +18,9 @@ class Api::V1::PantryIngredientsController < ApplicationController
     current_user.pantry_ingredients.find_by(ingredient: ingredient).destroy
     render json: current_user.pantry_ingredients, each_serializer: PantryIngredientSerializer
   end
+
+  def update
+    current_user.pantry_ingredients.update_pantry(params['recipe_ingredients'])
+    render json: current_user.pantry_ingredients, each_serializer: PantryIngredientSerializer
+  end
 end
