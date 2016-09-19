@@ -4,13 +4,12 @@ class User < ApplicationRecord
   validates :google_id, presence: true, uniqueness: true
 
   def self.find_or_create(user_params)
-    user = User.find_by(first_name: user_params['userName'],
-                        google_id: user_params['googleId'])
-    if user.valid?
+    user = User.find_by(google_id: user_params['googleId'])
+    if user
       user
     else
-      User.new(first_name: user_params['userName'],
-               google_id: user_params['googleId'])
+      User.new(google_id: user_params['googleId'],
+               first_name: user_params['userName'])
     end
   end
 end
