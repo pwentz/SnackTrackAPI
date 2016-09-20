@@ -23,7 +23,7 @@ gem 'pry-rails'
 gem 'responders'
 gem 'figaro'
 gem 'faraday'
-gem 'faker', git: 'git@github.com:stympy/faker.git'
+gem 'faker'
 gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do

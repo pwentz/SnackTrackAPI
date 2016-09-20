@@ -15,8 +15,7 @@ class RecipeFinder
   def fetch_recipes
     cached_recipes = Recipe.find_by_ingredients(ingredients.values)
     # USE RECIPES ALREADY IN DB TO LIMIT API CALLS
-    # Sun 12:30pm - only 5
-    if cached_recipes.length <= 5
+    if cached_recipes.length == 5
       cached_recipes
     else
       simple_recipe_data = search_service.recipe_match_api(ingredients)

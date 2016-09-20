@@ -11,7 +11,7 @@ class IngredientFinder
   def fetch_ingredients
     cached_results = Ingredient.find_by_name(search_terms)
     # USE INGREDIENTS ALREADY IN DB TO LIMIT API CALLS
-    if cached_results.count <= 5
+    if cached_results.count == 5
       cached_results
     else
       auto_complete_api_call
