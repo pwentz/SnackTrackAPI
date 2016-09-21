@@ -1,12 +1,43 @@
 FactoryGirl.define do
   factory :ingredient do
-    name 'apple'
+    name
     image 'apple.jpg'
   end
 
+  sequence :name do |i|
+    "apple#{i}"
+  end
+
+  factory :pantry_ingredient do
+    user
+    ingredient
+    amount 1
+    unit 'q'
+  end
+
   factory :recipe do
-    title 'Mac n Cheese'
+    title
     ready_time 45
     image 'macncheese.jpg'
+  end
+
+  sequence :title do |i|
+    "Mac n Cheese ##{i}"
+  end
+
+  factory :user do
+    first_name 'Pat'
+    google_id
+  end
+
+  sequence :google_id do |i|
+    "123#{i}"
+  end
+
+  factory :recipe_ingredient do
+    recipe
+    ingredient
+    unit 'q'
+    amount 1
   end
 end

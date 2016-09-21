@@ -1,0 +1,685 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=pasta%20dough,tomato%20sauce,shredded%20cheese,&number=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      X-Mashape-Key:
+      - 7jflWBgwuhmshxOW7nJBlzydGliAp1jrXWmjsnIzU228ojsQkb
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Allow-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Sep 2016 18:52:40 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Classifications-Limit:
+      - '10000'
+      X-Ratelimit-Classifications-Remaining:
+      - '10000'
+      X-Ratelimit-Requests-Limit:
+      - '500'
+      X-Ratelimit-Requests-Remaining:
+      - '475'
+      X-Ratelimit-Tinyrequests-Limit:
+      - '10000'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '9997'
+      Content-Length:
+      - '340'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":659358,"title":"Sausage Calzone","image":"https://spoonacular.com/recipeImages/Sausage-Calzone-659358.jpg","imageType":"jpg","usedIngredientCount":2,"missedIngredientCount":7,"likes":1},{"id":651956,"title":"Mini
+        eggplant pizza","image":"https://spoonacular.com/recipeImages/Mini-eggplant-pizza-651956.jpg","imageType":"jpg","usedIngredientCount":1,"missedIngredientCount":3,"likes":1},{"id":639318,"title":"Chorizo
+        and Cheese Crostini","image":"https://spoonacular.com/recipeImages/Chorizo-and-Cheese-Crostini-639318.jpg","imageType":"jpg","usedIngredientCount":1,"missedIngredientCount":3,"likes":1},{"id":654241,"title":"Oven-Baked
+        Feta Cheese Dip","image":"https://spoonacular.com/recipeImages/Oven-Baked-Feta-Cheese-Dip-654241.jpg","imageType":"jpg","usedIngredientCount":1,"missedIngredientCount":4,"likes":2},{"id":654887,"title":"Pasta
+        Shells With Ricotta Cheese Stuffing","image":"https://spoonacular.com/recipeImages/Pasta-Shells-With-Ricotta-Cheese-Stuffing-654887.jpg","imageType":"jpg","usedIngredientCount":1,"missedIngredientCount":4,"likes":1}]'
+    http_version: 
+  recorded_at: Wed, 21 Sep 2016 18:52:40 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/659358/information?includeNutrition=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/json
+      X-Mashape-Key:
+      - 7jflWBgwuhmshxOW7nJBlzydGliAp1jrXWmjsnIzU228ojsQkb
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Allow-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Sep 2016 18:52:40 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Classifications-Limit:
+      - '10000'
+      X-Ratelimit-Classifications-Remaining:
+      - '10000'
+      X-Ratelimit-Requests-Limit:
+      - '500'
+      X-Ratelimit-Requests-Remaining:
+      - '474'
+      X-Ratelimit-Tinyrequests-Limit:
+      - '10000'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '9997'
+      Content-Length:
+      - '1546'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjpmYWxzZSwidmVnYW4iOmZhbHNlLCJnbHV0ZW5GcmVl
+        IjpmYWxzZSwiZGFpcnlGcmVlIjpmYWxzZSwidmVyeUhlYWx0aHkiOmZhbHNl
+        LCJjaGVhcCI6ZmFsc2UsInZlcnlQb3B1bGFyIjpmYWxzZSwic3VzdGFpbmFi
+        bGUiOmZhbHNlLCJ3ZWlnaHRXYXRjaGVyU21hcnRQb2ludHMiOjMxLCJnYXBz
+        Ijoibm8iLCJsb3dGb2RtYXAiOmZhbHNlLCJrZXRvZ2VuaWMiOmZhbHNlLCJ3
+        aG9sZTMwIjpmYWxzZSwic2VydmluZ3MiOjQsInNvdXJjZVVybCI6Imh0dHA6
+        Ly93d3cuZm9vZGlzdGEuY29tL3JlY2lwZS9HWjhGTFJXRi9zYXVzYWdlLWNh
+        bHpvbmUiLCJzcG9vbmFjdWxhclNvdXJjZVVybCI6Imh0dHBzOi8vc3Bvb25h
+        Y3VsYXIuY29tL3NhdXNhZ2UtY2Fsem9uZS02NTkzNTgiLCJhZ2dyZWdhdGVM
+        aWtlcyI6MSwiY3JlZGl0VGV4dCI6IkZvb2Rpc3RhLmNvbSDigJMgVGhlIENv
+        b2tpbmcgRW5jeWNsb3BlZGlhIEV2ZXJ5b25lIENhbiBFZGl0IiwibGljZW5z
+        ZSI6IkNDIEJZIDMuMCIsInNvdXJjZU5hbWUiOiJGb29kaXN0YSIsImV4dGVu
+        ZGVkSW5ncmVkaWVudHMiOlt7ImlkIjoyMDQ0LCJhaXNsZSI6IlByb2R1Y2Ui
+        LCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL2Nkbi9pbmdyZWRp
+        ZW50c18xMDB4MTAwL2Jhc2lsLmpwZyIsIm5hbWUiOiJiYXNpbCIsImFtb3Vu
+        dCI6MS4wLCJ1bml0IjoidGFibGVzcG9vbiIsInVuaXRTaG9ydCI6IlQiLCJ1
+        bml0TG9uZyI6InRhYmxlc3Bvb24iLCJvcmlnaW5hbFN0cmluZyI6IjEgdGFi
+        bGVzcG9vbiBvZiBGcmVzaCBCYXNpbCAob3IgMSB0c3AgRHJ5KSIsIm1ldGFJ
+        bmZvcm1hdGlvbiI6WyJmcmVzaCIsImRyeSIsIihvciAxIHRzcCApIl19LHsi
+        aWQiOjEwMTcwNjMsImFpc2xlIjoiTWVhdCIsImltYWdlIjoiaHR0cHM6Ly9z
+        cG9vbmFjdWxhci5jb20vY2RuL2luZ3JlZGllbnRzXzEwMHgxMDAvc2F1c2Fn
+        ZXMuanBnIiwibmFtZSI6ImJ1bGsgc2F1c2FnZSIsImFtb3VudCI6MS4wLCJ1
+        bml0IjoicG91bmQiLCJ1bml0U2hvcnQiOiJsYiIsInVuaXRMb25nIjoicG91
+        bmQiLCJvcmlnaW5hbFN0cmluZyI6IjEgcG91bmQgb2YgYnVsayBTYXVzYWdl
+        IiwibWV0YUluZm9ybWF0aW9uIjpbXX0seyJpZCI6MTAxMTAyNiwiYWlzbGUi
+        OiJDaGVlc2UiLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL2Nk
+        bi9pbmdyZWRpZW50c18xMDB4MTAwL2NoZWRkYXItY2hlZXNlLmpwZyIsIm5h
+        bWUiOiJmb3VyIGNoZWVzZSBtaXgiLCJhbW91bnQiOjUuMCwidW5pdCI6Im91
+        bmNlcyIsInVuaXRTaG9ydCI6Im96IiwidW5pdExvbmciOiJvdW5jZXMiLCJv
+        cmlnaW5hbFN0cmluZyI6IjUgb3VuY2VzIG9mIGl0YWxpYW4gY2hlZXNlIG1p
+        eCIsIm1ldGFJbmZvcm1hdGlvbiI6WyJpdGFsaWFuIl19LHsiaWQiOjExMjE1
+        LCJhaXNsZSI6IlByb2R1Y2UiLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3Vs
+        YXIuY29tL2Nkbi9pbmdyZWRpZW50c18xMDB4MTAwL2dhcmxpYy5qcGciLCJu
+        YW1lIjoiZ2FybGljIiwiYW1vdW50IjozLjAsInVuaXQiOiJjbG92ZXMiLCJ1
+        bml0U2hvcnQiOiJjbG92ZXMiLCJ1bml0TG9uZyI6ImNsb3ZlcyIsIm9yaWdp
+        bmFsU3RyaW5nIjoiMyBjbG92ZXMgb2YgR2FybGljIiwibWV0YUluZm9ybWF0
+        aW9uIjpbXX0seyJpZCI6MTEyODIsImFpc2xlIjoiUHJvZHVjZSIsImltYWdl
+        IjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vY2RuL2luZ3JlZGllbnRzXzEw
+        MHgxMDAvYnJvd24tb25pb24uanBnIiwibmFtZSI6Im9uaW9uIiwiYW1vdW50
+        IjoxLjAsInVuaXQiOiIiLCJ1bml0U2hvcnQiOiIiLCJ1bml0TG9uZyI6IiIs
+        Im9yaWdpbmFsU3RyaW5nIjoiMSBPbmlvbiwgQ2hvcHBlZCIsIm1ldGFJbmZv
+        cm1hdGlvbiI6WyJjaG9wcGVkIl19LHsiaWQiOjIwMjcsImFpc2xlIjoiU3Bp
+        Y2VzIGFuZCBTZWFzb25pbmdzIiwiaW1hZ2UiOiJodHRwczovL3Nwb29uYWN1
+        bGFyLmNvbS9jZG4vaW5ncmVkaWVudHNfMTAweDEwMC9vcmVnYW5vLmpwZyIs
+        Im5hbWUiOiJvcmVnYW5vIiwiYW1vdW50IjoxLjAsInVuaXQiOiJ0ZWFzcG9v
+        biIsInVuaXRTaG9ydCI6InQiLCJ1bml0TG9uZyI6InRlYXNwb29uIiwib3Jp
+        Z2luYWxTdHJpbmciOiIxIHRlYXNwb29uIG9mIE9yZWdhbm8iLCJtZXRhSW5m
+        b3JtYXRpb24iOltdfSx7ImlkIjo3MDU3LCJhaXNsZSI6Ik1lYXQiLCJpbWFn
+        ZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL2Nkbi9pbmdyZWRpZW50c18x
+        MDB4MTAwL3BlcHBlcm9uaS5wbmciLCJuYW1lIjoicGVwcGVyb25pIiwiYW1v
+        dW50Ijo1LjAsInVuaXQiOiJvdW5jZXMiLCJ1bml0U2hvcnQiOiJveiIsInVu
+        aXRMb25nIjoib3VuY2VzIiwib3JpZ2luYWxTdHJpbmciOiI1IG91bmNlcyBv
+        ZiBQZXBwZXJvbmkiLCJtZXRhSW5mb3JtYXRpb24iOltdfSx7ImlkIjo5MzYx
+        MCwiYWlzbGUiOiJSZWZyaWdlcmF0ZWQiLCJpbWFnZSI6Imh0dHBzOi8vc3Bv
+        b25hY3VsYXIuY29tL2Nkbi9pbmdyZWRpZW50c18xMDB4MTAwL3BpenphLWRv
+        dWdoLmpwZyIsIm5hbWUiOiJwaXp6YSBkb3VnaCIsImFtb3VudCI6MS4wLCJ1
+        bml0IjoiYmFsbCIsInVuaXRTaG9ydCI6ImJhbGwiLCJ1bml0TG9uZyI6ImJh
+        bGwiLCJvcmlnaW5hbFN0cmluZyI6IjEgYmFsbCBTdG9yZSBCb3VnaHQgUGl6
+        emEgRG91Z2giLCJtZXRhSW5mb3JtYXRpb24iOlsic3RvcmUgYm91Z2h0Il19
+        LHsiaWQiOjExNTQ5LCJhaXNsZSI6IlBhc3RhIGFuZCBSaWNlIiwiaW1hZ2Ui
+        OiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9jZG4vaW5ncmVkaWVudHNfMTAw
+        eDEwMC90b21hdG8tc2F1Y2Utb3ItcGFzdGEtc2F1Y2UuanBnIiwibmFtZSI6
+        InBpenphIHNhdWNlIiwiYW1vdW50IjoxLjAsInVuaXQiOiJqYXIiLCJ1bml0
+        U2hvcnQiOiJqYXIiLCJ1bml0TG9uZyI6ImphciIsIm9yaWdpbmFsU3RyaW5n
+        IjoiMSBqYXIgb2YgUGl6emEgU2F1Y2UiLCJtZXRhSW5mb3JtYXRpb24iOltd
+        fV0sImlkIjo2NTkzNTgsInRpdGxlIjoiU2F1c2FnZSBDYWx6b25lIiwicmVh
+        ZHlJbk1pbnV0ZXMiOjQ1LCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIu
+        Y29tL3JlY2lwZUltYWdlcy9TYXVzYWdlLUNhbHpvbmUtNjU5MzU4LmpwZyIs
+        ImltYWdlVHlwZSI6ImpwZyIsImluc3RydWN0aW9ucyI6IjxvbD48bGk+U3Rh
+        cnQgb2ZmIGJ5IGNvb2tpbmcgeW91ciBzYXVzYWdlLiBXaGVuIHlvdXIgc2F1
+        c2FnZSBpcyBuZWFybHkgY29va2VkLCBhZGQgaW4gdGhlIHBlcHBlcm9uaSBh
+        bmQgY29vayBpdCB1cCBmb3IgYSBtaW51dGUgb3IgdHdvIG1vcmUgdW50aWwg
+        YWxsIHRoZSBtZWF0IGlzIGNvb2tlZCB0aHJvdWdoLiBEcmFpbiBvZmYgdGhl
+        IGZhdC48L2xpPjxsaT5Ob3cgYWRkIGluIHRoZSBnYXJsaWMsIGJhc2lsLCBv
+        cmVnYW5vLCBhbmQgb25pb24gYW5kIGxldCBpdCBjb29rIHVwIGFuZCBnZXQg
+        aG90LiBSZW1vdmUgdGhlIG1peHR1cmUgZnJvbSBoZWF0LjwvbGk+PGxpPkdy
+        YWIgeW91ciBkb3VnaCBiYWxsLCByaXAgYSBnb29kIHNpemVkIHBpZWNlIG9m
+        ZiBhbmQgcm9sbCBpdCBvdXQgYWJvdXQgMS80IHRoaWNrLiBHcmFiIHlvdXIg
+        ZmlsbGluZyBhbmQgc3Bvb24gaW4gYSBmZXcgZGVjZW50IHNpemVkIHNwb29u
+        ZnVscy4gQmUgc3VyZSB0byBsZWF2ZSBlbm91Z2ggcm9vbSB0byBmb2xkIGl0
+        IG92ZXIgYW5kIHNlYWwgdXAgeW91ciBlZGdlcy48L2xpPjxsaT5Gb2xkIHRo
+        ZSBkb3VnaCBvdmVyIHlvdXIgdG9wcGluZyBhbmQgc2VhbCB0aGUgZWRnZXMg
+        dXAuIEkgcm9sbGVkIG15IGVkZ2VzIGludG8gdGhlIHRvcCB0byBzZWFsIGl0
+        IHVwLiBCZSBzdXJlIHRvIGN1dCBhIGZldyBzbGl0cyBpbiB0aGUgdG9wIG9m
+        IGNhbHpvbmUgc28gdGhhdCBzdGVhbSBjYW4gcmVsZWFzZSBhcyBpdCBjb29r
+        cyBpbiB0aGUgb3Zlbi4gQW5kIHRoaXMgaXMgb3B0aW9uYWwsIGJ1dCBJIGFs
+        c28gYnJ1c2hlZCBzb21lIGVnZyB3aGl0ZSBvbiB0aGUgdG9wcyBvZiB0aGVz
+        ZSBiZWF1dGllcyB0byBoZWxwIHRoZW0gZ2V0IGEgbmljZSBnb2xkZW4gYnJv
+        d24gY29sb3IgaW4gdGhlIG92ZW4uPC9saT48bGk+VGhyb3cgdGhlbSBpbiBh
+        IHByZWhlYXRlZCBvdmVuIHNldCB0byA0MjUgZm9yIDE1LTIwIG1pbnV0ZXMg
+        b3IgdW50aWwgdGhlIHRvcCBpcyBhIG5pY2UgZ29sZGVuIGJyb3duLiBJIGNv
+        b2tlZCBtaW5lIG9uIGEgcHJlaGVhdGVkIHBpenphIHN0b25lIHRvIGVuc3Vy
+        ZSB0aGUgYm90dG9tIGhhZCBhIG5pY2UsIGNyaXNweSBjcnVzdC48L2xpPjxs
+        aT5TZXJ2ZSB3aXRoIHBpenphIHNhdWNlLjwvbGk+PC9vbD4ifQ==
+    http_version: 
+  recorded_at: Wed, 21 Sep 2016 18:52:41 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/651956/information?includeNutrition=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/json
+      X-Mashape-Key:
+      - 7jflWBgwuhmshxOW7nJBlzydGliAp1jrXWmjsnIzU228ojsQkb
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Allow-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Sep 2016 18:52:40 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Classifications-Limit:
+      - '10000'
+      X-Ratelimit-Classifications-Remaining:
+      - '10000'
+      X-Ratelimit-Requests-Limit:
+      - '500'
+      X-Ratelimit-Requests-Remaining:
+      - '473'
+      X-Ratelimit-Tinyrequests-Limit:
+      - '10000'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '9997'
+      Content-Length:
+      - '1068'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjpmYWxzZSwidmVnYW4iOmZhbHNlLCJnbHV0ZW5GcmVl
+        Ijp0cnVlLCJkYWlyeUZyZWUiOmZhbHNlLCJ2ZXJ5SGVhbHRoeSI6ZmFsc2Us
+        ImNoZWFwIjpmYWxzZSwidmVyeVBvcHVsYXIiOmZhbHNlLCJzdXN0YWluYWJs
+        ZSI6ZmFsc2UsIndlaWdodFdhdGNoZXJTbWFydFBvaW50cyI6MTEsImdhcHMi
+        OiJubyIsImxvd0ZvZG1hcCI6dHJ1ZSwia2V0b2dlbmljIjpmYWxzZSwid2hv
+        bGUzMCI6ZmFsc2UsInNlcnZpbmdzIjozLCJzb3VyY2VVcmwiOiJodHRwOi8v
+        d3d3LmZvb2Rpc3RhLmNvbS9yZWNpcGUvMlI1TVNNTjMvbWluaS1lZ2dwbGFu
+        dC1waXp6YSIsInNwb29uYWN1bGFyU291cmNlVXJsIjoiaHR0cHM6Ly9zcG9v
+        bmFjdWxhci5jb20vbWluaS1lZ2dwbGFudC1waXp6YS02NTE5NTYiLCJhZ2dy
+        ZWdhdGVMaWtlcyI6MSwiY3JlZGl0VGV4dCI6IkZvb2Rpc3RhLmNvbSDigJMg
+        VGhlIENvb2tpbmcgRW5jeWNsb3BlZGlhIEV2ZXJ5b25lIENhbiBFZGl0Iiwi
+        bGljZW5zZSI6IkNDIEJZIDMuMCIsInNvdXJjZU5hbWUiOiJGb29kaXN0YSIs
+        ImV4dGVuZGVkSW5ncmVkaWVudHMiOlt7ImlkIjoxMDQxMDA5LCJhaXNsZSI6
+        IkNoZWVzZSIsImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vY2Ru
+        L2luZ3JlZGllbnRzXzEwMHgxMDAvY2hlZGRhci1jaGVlc2UuanBnIiwibmFt
+        ZSI6ImNoZWVzZSIsImFtb3VudCI6MS4wLCJ1bml0IjoiY3VwIiwidW5pdFNo
+        b3J0IjoiYyIsInVuaXRMb25nIjoiY3VwIiwib3JpZ2luYWxTdHJpbmciOiIx
+        IGN1cCBncmF0ZWQgY2hlZXNlIiwibWV0YUluZm9ybWF0aW9uIjpbImdyYXRl
+        ZCJdfSx7ImlkIjoxMTIwOSwiYWlzbGUiOiJQcm9kdWNlIiwiaW1hZ2UiOiJo
+        dHRwczovL3Nwb29uYWN1bGFyLmNvbS9jZG4vaW5ncmVkaWVudHNfMTAweDEw
+        MC9lZ2dwbGFudC5qcGciLCJuYW1lIjoiZWdncGxhbnQiLCJhbW91bnQiOjMu
+        MCwidW5pdCI6InNsaWNlcyIsInVuaXRTaG9ydCI6InNsaWNlcyIsInVuaXRM
+        b25nIjoic2xpY2VzIiwib3JpZ2luYWxTdHJpbmciOiIzIHNsaWNlcyBvZiBl
+        Z2dwbGFudCwgZHJhaW5lZCBvbiBhIHBhcGVyIHRvd2VsIGZvciAzMCB0byA0
+        NSBtaW51dGVzIiwibWV0YUluZm9ybWF0aW9uIjpbImRyYWluZWQiLCJmb3Ig
+        MzAgdG8gNDUgbWludXRlcyJdfSx7ImlkIjo0MDUzLCJhaXNsZSI6Ik9pbCwg
+        VmluZWdhciwgU2FsYWQgRHJlc3NpbmciLCJpbWFnZSI6Imh0dHBzOi8vc3Bv
+        b25hY3VsYXIuY29tL2Nkbi9pbmdyZWRpZW50c18xMDB4MTAwL29saXZlLW9p
+        bC5qcGciLCJuYW1lIjoib2xpdmUgb2lsIiwiYW1vdW50IjozLjAsInVuaXQi
+        OiJzZXJ2aW5ncyIsInVuaXRTaG9ydCI6InNlcnZpbmdzIiwidW5pdExvbmci
+        OiJzZXJ2aW5ncyIsIm9yaWdpbmFsU3RyaW5nIjoiT2xpdmUgb2lsIiwibWV0
+        YUluZm9ybWF0aW9uIjpbXX0seyJpZCI6NzA1NywiYWlzbGUiOiJNZWF0Iiwi
+        aW1hZ2UiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9jZG4vaW5ncmVkaWVu
+        dHNfMTAweDEwMC9wZXBwZXJvbmkucG5nIiwibmFtZSI6InBlcHBlcm9uaSIs
+        ImFtb3VudCI6MTIuMCwidW5pdCI6InNsaWNlcyIsInVuaXRTaG9ydCI6InNs
+        aWNlcyIsInVuaXRMb25nIjoic2xpY2VzIiwib3JpZ2luYWxTdHJpbmciOiJB
+        Ym91dCAxMiBzbGljZXMgb2YgcGVwcGVyb25pIiwibWV0YUluZm9ybWF0aW9u
+        IjpbXX0seyJpZCI6MTAxMjA0NywiYWlzbGUiOiJTcGljZXMgYW5kIFNlYXNv
+        bmluZ3MiLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL2Nkbi9p
+        bmdyZWRpZW50c18xMDB4MTAwL3NhbHQuanBnIiwibmFtZSI6InNlYSBzYWx0
+        IiwiYW1vdW50IjozLjAsInVuaXQiOiJzZXJ2aW5ncyIsInVuaXRTaG9ydCI6
+        InNlcnZpbmdzIiwidW5pdExvbmciOiJzZXJ2aW5ncyIsIm9yaWdpbmFsU3Ry
+        aW5nIjoiU2VhIHNhbHQiLCJtZXRhSW5mb3JtYXRpb24iOltdfSx7ImlkIjox
+        MTU0OSwiYWlzbGUiOiJQYXN0YSBhbmQgUmljZSIsImltYWdlIjoiaHR0cHM6
+        Ly9zcG9vbmFjdWxhci5jb20vY2RuL2luZ3JlZGllbnRzXzEwMHgxMDAvdG9t
+        YXRvLXNhdWNlLW9yLXBhc3RhLXNhdWNlLmpwZyIsIm5hbWUiOiJ0b21hdG8g
+        c2F1Y2UiLCJhbW91bnQiOjAuMzMzMzMzMzMzMzMzMzMzMywidW5pdCI6ImN1
+        cCIsInVuaXRTaG9ydCI6ImMiLCJ1bml0TG9uZyI6ImN1cHMiLCJvcmlnaW5h
+        bFN0cmluZyI6IjEvMyBjdXAgdG9tYXRvIHNhdWNlIiwibWV0YUluZm9ybWF0
+        aW9uIjpbXX1dLCJpZCI6NjUxOTU2LCJ0aXRsZSI6Ik1pbmkgZWdncGxhbnQg
+        cGl6emEiLCJyZWFkeUluTWludXRlcyI6NDUsImltYWdlIjoiaHR0cHM6Ly9z
+        cG9vbmFjdWxhci5jb20vcmVjaXBlSW1hZ2VzL01pbmktZWdncGxhbnQtcGl6
+        emEtNjUxOTU2LmpwZyIsImltYWdlVHlwZSI6ImpwZyIsImluc3RydWN0aW9u
+        cyI6IjxvbD48bGk+UHV0IGVub3VnaCBvbGl2ZSBvaWwgaW4gdGhlIGJvdHRv
+        bSBvZiBhIHBpZSBwYW4gdG8gbGlnaHRseSBjb2F0IHRoZSBib3R0b20gb2Yg
+        dGhlIHBhbi4gU3ByaW5rbGUgd2l0aCBzZWEgc2FsdC4gUHV0IHRoZSBwYW4g
+        aW4gdGhlIG92ZW4gYW5kIHByZWhlYXQgaXQgdG8gMzUwIGRlZ3JlZXMgRi48
+        L2xpPjxsaT5PbmNlIHRoZSBwYW4gaXMgcHJlaGVhdGVkLCBhZGQgdGhlIGVn
+        Z3BsYW50IHNsaWNlcy4gQ29vayBmb3IgNSBtaW51dGVzLiBUYWtlIHRoZSBw
+        YW4gb3V0IG9mIHRoZSBvdmVuIGFuZCB0dXJuIG92ZXIgdGhlIGVnZ3BsYW50
+        IHNsaWNlcy4gU3Bvb24gdG9tYXRvIHNhdWNlIG9udG8gZWFjaCBzbGljZS4g
+        VG9wIHdpdGggY2hlZXNlIGFuZCBwZXBwZXJvbmkuIFB1dCBiYWNrIGluIG92
+        ZW4gYW5kIGNvb2sgZm9yIGFub3RoZXIgNSBtaW51dGVzLCBvciB1bnRpbCB0
+        aGUgY2hlZXNlIGlzIG1lbHRlZC48L2xpPjxsaT5SZW1vdmUgZnJvbSB0aGUg
+        b3ZlbiBhbmQgc2VydmUuPC9saT48L29sPiJ9
+    http_version: 
+  recorded_at: Wed, 21 Sep 2016 18:52:41 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/639318/information?includeNutrition=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/json
+      X-Mashape-Key:
+      - 7jflWBgwuhmshxOW7nJBlzydGliAp1jrXWmjsnIzU228ojsQkb
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Allow-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Sep 2016 18:52:41 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Classifications-Limit:
+      - '10000'
+      X-Ratelimit-Classifications-Remaining:
+      - '10000'
+      X-Ratelimit-Requests-Limit:
+      - '500'
+      X-Ratelimit-Requests-Remaining:
+      - '472'
+      X-Ratelimit-Tinyrequests-Limit:
+      - '10000'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '9997'
+      Content-Length:
+      - '1141'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjpmYWxzZSwidmVnYW4iOmZhbHNlLCJnbHV0ZW5GcmVl
+        IjpmYWxzZSwiZGFpcnlGcmVlIjpmYWxzZSwidmVyeUhlYWx0aHkiOmZhbHNl
+        LCJjaGVhcCI6ZmFsc2UsInZlcnlQb3B1bGFyIjpmYWxzZSwic3VzdGFpbmFi
+        bGUiOmZhbHNlLCJ3ZWlnaHRXYXRjaGVyU21hcnRQb2ludHMiOjEwLCJnYXBz
+        Ijoibm8iLCJsb3dGb2RtYXAiOmZhbHNlLCJrZXRvZ2VuaWMiOmZhbHNlLCJ3
+        aG9sZTMwIjpmYWxzZSwic2VydmluZ3MiOjgsInNvdXJjZVVybCI6Imh0dHA6
+        Ly93d3cuZm9vZGlzdGEuY29tL3JlY2lwZS9INVZSTkNUWC9jaG9yaXpvLWFu
+        ZC1jaGVlc2UtY3Jvc3RpbmkiLCJzcG9vbmFjdWxhclNvdXJjZVVybCI6Imh0
+        dHBzOi8vc3Bvb25hY3VsYXIuY29tL2Nob3Jpem8tYW5kLWNoZWVzZS1jcm9z
+        dGluaS02MzkzMTgiLCJhZ2dyZWdhdGVMaWtlcyI6MSwiY3JlZGl0VGV4dCI6
+        IkZvb2Rpc3RhLmNvbSDigJMgVGhlIENvb2tpbmcgRW5jeWNsb3BlZGlhIEV2
+        ZXJ5b25lIENhbiBFZGl0IiwibGljZW5zZSI6IkNDIEJZIDMuMCIsInNvdXJj
+        ZU5hbWUiOiJGb29kaXN0YSIsImV4dGVuZGVkSW5ncmVkaWVudHMiOlt7Imlk
+        IjoxODAzMywiYWlzbGUiOiJCYWtlcnkvQnJlYWQiLCJpbWFnZSI6Imh0dHBz
+        Oi8vc3Bvb25hY3VsYXIuY29tL2Nkbi9pbmdyZWRpZW50c18xMDB4MTAwL2Jh
+        Z3VldHRlLnBuZyIsIm5hbWUiOiJiYWd1ZXR0ZSIsImFtb3VudCI6MC41LCJ1
+        bml0IjoibG9hZiIsInVuaXRTaG9ydCI6ImxvYWYiLCJ1bml0TG9uZyI6Imxv
+        YWZzIiwib3JpZ2luYWxTdHJpbmciOiIxLzIgbG9hZiBvZiBJdGFsaWFuIGJh
+        Z3VldHRlIiwibWV0YUluZm9ybWF0aW9uIjpbIml0YWxpYW4iXX0seyJpZCI6
+        MTExMDksImFpc2xlIjoiUHJvZHVjZSIsImltYWdlIjoiaHR0cHM6Ly9zcG9v
+        bmFjdWxhci5jb20vY2RuL2luZ3JlZGllbnRzXzEwMHgxMDAvY2FiYmFnZS5q
+        cGciLCJuYW1lIjoiY2FiYmFnZSIsImFtb3VudCI6MC4yNSwidW5pdCI6Imhl
+        YWQiLCJ1bml0U2hvcnQiOiJoZWFkIiwidW5pdExvbmciOiJoZWFkcyIsIm9y
+        aWdpbmFsU3RyaW5nIjoiMS80IGhlYWQgY2FiYmFnZSwgZ3JhdGVkIiwibWV0
+        YUluZm9ybWF0aW9uIjpbImdyYXRlZCJdfSx7ImlkIjo3MDE5LCJhaXNsZSI6
+        Ik1lYXQiLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL2Nkbi9p
+        bmdyZWRpZW50c18xMDB4MTAwL2Nob3Jpem8uanBnIiwibmFtZSI6ImNob3Jp
+        em8iLCJhbW91bnQiOjEuMCwidW5pdCI6InBvdW5kIiwidW5pdFNob3J0Ijoi
+        bGIiLCJ1bml0TG9uZyI6InBvdW5kIiwib3JpZ2luYWxTdHJpbmciOiIxIHBv
+        dW5kIGNob3Jpem8sIGNhc2luZ3MgcmVtb3ZlZCIsIm1ldGFJbmZvcm1hdGlv
+        biI6W119LHsiaWQiOjEwMTEwMjYsImFpc2xlIjoiQ2hlZXNlIiwiaW1hZ2Ui
+        OiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9jZG4vaW5ncmVkaWVudHNfMTAw
+        eDEwMC9jaGVkZGFyLWNoZWVzZS5qcGciLCJuYW1lIjoic2hyZWRkZWQgY2hl
+        ZXNlIiwiYW1vdW50IjowLjUsInVuaXQiOiJjdXAiLCJ1bml0U2hvcnQiOiJj
+        IiwidW5pdExvbmciOiJjdXBzIiwib3JpZ2luYWxTdHJpbmciOiIxLzIgY3Vw
+        IHNocmVkZGVkIGNoZWVzZSIsIm1ldGFJbmZvcm1hdGlvbiI6WyJzaHJlZGRl
+        ZCJdfV0sImlkIjo2MzkzMTgsInRpdGxlIjoiQ2hvcml6byBhbmQgQ2hlZXNl
+        IENyb3N0aW5pIiwicmVhZHlJbk1pbnV0ZXMiOjMwLCJpbWFnZSI6Imh0dHBz
+        Oi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZUltYWdlcy9DaG9yaXpvLWFuZC1D
+        aGVlc2UtQ3Jvc3RpbmktNjM5MzE4LmpwZyIsImltYWdlVHlwZSI6ImpwZyIs
+        Imluc3RydWN0aW9ucyI6IjxvbD48bGk+UHJlaGVhdCBvdmVuIHRvIDQwMCBk
+        ZWdyZWVzLjwvbGk+PGxpPkhlYXQgYSAxMi1pbmNoIGNhc3QtaXJvbiBza2ls
+        bGV0LiBBZGQgdGhlIGNob3Jpem8sIGJyZWFrIGl0IGludG8gY2h1bmtzIHdp
+        dGggYSB3b29kZW4gc3Bvb24gYW5kIGNvb2sgb3ZlciBtb2RlcmF0ZSBoZWF0
+        LCB0dXJuaW5nLCB1bnRpbCBjb29rZWQgdGhyb3VnaCBhbmQgbGlnaHRseSBi
+        cm93bmVkLCBhYm91dCA4IG1pbnV0ZXMuICBSZW1vdmUgZnJvbSBoZWF0IHRv
+        IGFsbG93IHRvIGNvb2wuICAoVGhpcyBzdGVwIGNhbiBiZSBkb25lIGFuZCBh
+        ZHZhbmNlIGFuZCByZWZyaWdlcmF0ZWQgb3Zlcm5pZ2h0Lik8L2xpPjxsaT5H
+        cmF0ZSBjaGVlc2VzIGFuZCBjYWJiYWdlLjwvbGk+PGxpPlNsaWNlIGJhZ3Vl
+        dHRlIGludG8gMS80IHNsaWNlcyBvbiBhIHNsaWdodCBkaWFnb25hbCBhbmds
+        ZS4gIFBsYWNlIG9uIGEgY29va2luZyBzaGVldC4gIChDb25zaWRlciBsaW5p
+        bmcgd2l0aCBmb2lsIGZvciBlYXN5IGNsZWFuLXVwIHNpbmNlIHlvdSB3aWxs
+        IHNwb29uIHRoZSBtaXh0dXJlIG9uIHRvIGVhY2ggc2xpY2UuKTwvbGk+PGxp
+        PkNvbWJpbmUgdGhlIGNoZWVzZSBhbmQgY2FiYmFnZSB3aXRoIHRoZSBjb29r
+        ZWQgY2hvcml6by4gIFVzaW5nIGEgc3Bvb24sIHRvcCBlYWNoIGJhZ3VldHRl
+        IHNsaWNlIHdpdGggb25lIG9yIHR3byBzcG9vbmZ1bHMuPC9saT48bGk+SGVh
+        dCBpbiB0aGUgb3ZlbiBmb3IgMTAgbWludXRlcyB0byBhbGxvdyBmb3IgY2hl
+        ZXNlIHRvIG1lbHQgYW5kIGJyZWFkIHRvIGdldCBjcmlzcHkuPC9saT48L29s
+        PiJ9
+    http_version: 
+  recorded_at: Wed, 21 Sep 2016 18:52:42 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/654241/information?includeNutrition=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/json
+      X-Mashape-Key:
+      - 7jflWBgwuhmshxOW7nJBlzydGliAp1jrXWmjsnIzU228ojsQkb
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Allow-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Sep 2016 18:52:41 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Classifications-Limit:
+      - '10000'
+      X-Ratelimit-Classifications-Remaining:
+      - '10000'
+      X-Ratelimit-Requests-Limit:
+      - '500'
+      X-Ratelimit-Requests-Remaining:
+      - '471'
+      X-Ratelimit-Tinyrequests-Limit:
+      - '10000'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '9997'
+      Content-Length:
+      - '1045'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjp0cnVlLCJ2ZWdhbiI6ZmFsc2UsImdsdXRlbkZyZWUi
+        OnRydWUsImRhaXJ5RnJlZSI6ZmFsc2UsInZlcnlIZWFsdGh5IjpmYWxzZSwi
+        Y2hlYXAiOmZhbHNlLCJ2ZXJ5UG9wdWxhciI6ZmFsc2UsInN1c3RhaW5hYmxl
+        IjpmYWxzZSwid2VpZ2h0V2F0Y2hlclNtYXJ0UG9pbnRzIjo3LCJnYXBzIjoi
+        bm8iLCJsb3dGb2RtYXAiOmZhbHNlLCJrZXRvZ2VuaWMiOnRydWUsIndob2xl
+        MzAiOmZhbHNlLCJzZXJ2aW5ncyI6NCwic291cmNlVXJsIjoiaHR0cDovL3d3
+        dy5mb29kaXN0YS5jb20vcmVjaXBlLzVLTVhIM0QzL292ZW4tYmFrZWQtZmV0
+        YS1jaGVlc2UtZGlwIiwic3Bvb25hY3VsYXJTb3VyY2VVcmwiOiJodHRwczov
+        L3Nwb29uYWN1bGFyLmNvbS9vdmVuLWJha2VkLWZldGEtY2hlZXNlLWRpcC02
+        NTQyNDEiLCJhZ2dyZWdhdGVMaWtlcyI6MiwiY3JlZGl0VGV4dCI6IkZvb2Rp
+        c3RhLmNvbSDigJMgVGhlIENvb2tpbmcgRW5jeWNsb3BlZGlhIEV2ZXJ5b25l
+        IENhbiBFZGl0IiwibGljZW5zZSI6IkNDIEJZIDMuMCIsInNvdXJjZU5hbWUi
+        OiJGb29kaXN0YSIsImV4dGVuZGVkSW5ncmVkaWVudHMiOlt7ImlkIjoxMDE5
+        LCJhaXNsZSI6IkNoZWVzZSIsImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxh
+        ci5jb20vY2RuL2luZ3JlZGllbnRzXzEwMHgxMDAvZmV0YS1jaGVlc2UuanBn
+        IiwibmFtZSI6ImZldGEgY2hlZXNlIiwiYW1vdW50IjoxLjAsInVuaXQiOiJj
+        dXAiLCJ1bml0U2hvcnQiOiJjIiwidW5pdExvbmciOiJjdXAiLCJvcmlnaW5h
+        bFN0cmluZyI6IjEgY3VwIGNydW1ibGVkIGZldGEgY2hlZXNlIiwibWV0YUlu
+        Zm9ybWF0aW9uIjpbImNydW1ibGVkIl19LHsiaWQiOjExMjE1LCJhaXNsZSI6
+        IlByb2R1Y2UiLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL2Nk
+        bi9pbmdyZWRpZW50c18xMDB4MTAwL2dhcmxpYy5qcGciLCJuYW1lIjoiZ2Fy
+        bGljIiwiYW1vdW50IjozLjAsInVuaXQiOiJjbG92ZXMiLCJ1bml0U2hvcnQi
+        OiJjbG92ZXMiLCJ1bml0TG9uZyI6ImNsb3ZlcyIsIm9yaWdpbmFsU3RyaW5n
+        IjoiMyBjbG92ZXMgb2YgZ2FybGljLCBtaW5jZWQiLCJtZXRhSW5mb3JtYXRp
+        b24iOlsibWluY2VkIl19LHsiaWQiOjEwMDksImFpc2xlIjoiQ2hlZXNlIiwi
+        aW1hZ2UiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9jZG4vaW5ncmVkaWVu
+        dHNfMTAweDEwMC9jaGVkZGFyLWNoZWVzZS5qcGciLCJuYW1lIjoibWlsZCBj
+        aGVkZGFyIGNoZWVzZSIsImFtb3VudCI6MC41LCJ1bml0IjoiY3VwIiwidW5p
+        dFNob3J0IjoiYyIsInVuaXRMb25nIjoiY3VwcyIsIm9yaWdpbmFsU3RyaW5n
+        IjoiMS8yIGN1cCBtaWxkIGNoZWRkYXIgY2hlZXNlLCBzaHJlZGRlZCIsIm1l
+        dGFJbmZvcm1hdGlvbiI6WyJzaHJlZGRlZCJdfSx7ImlkIjoxMDI4LCJhaXNs
+        ZSI6IkNoZWVzZSIsImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20v
+        Y2RuL2luZ3JlZGllbnRzXzEwMHgxMDAvc2hyZWRkZWQtY2hlZXNlLXdoaXRl
+        LmpwZyIsIm5hbWUiOiJwYXJ0LXNraW0gbW96emFyZWxsYSBjaGVlc2UiLCJh
+        bW91bnQiOjAuNSwidW5pdCI6ImN1cCIsInVuaXRTaG9ydCI6ImMiLCJ1bml0
+        TG9uZyI6ImN1cHMiLCJvcmlnaW5hbFN0cmluZyI6IjEvMiBjdXAgcGFydC1z
+        a2ltIG1venphcmVsbGEgY2hlZXNlLCBzaHJlZGRlZCIsIm1ldGFJbmZvcm1h
+        dGlvbiI6WyJzaHJlZGRlZCJdfSx7ImlkIjoxMTU0OSwiYWlzbGUiOiJQYXN0
+        YSBhbmQgUmljZSIsImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20v
+        Y2RuL2luZ3JlZGllbnRzXzEwMHgxMDAvdG9tYXRvLXNhdWNlLW9yLXBhc3Rh
+        LXNhdWNlLmpwZyIsIm5hbWUiOiJ0b21hdG8gc2F1Y2UiLCJhbW91bnQiOjAu
+        MjUsInVuaXQiOiJjdXAiLCJ1bml0U2hvcnQiOiJjIiwidW5pdExvbmciOiJj
+        dXBzIiwib3JpZ2luYWxTdHJpbmciOiIxLzQgY3VwIG9mIHlvdXIgZmF2b3Jp
+        dGUgdG9tYXRvIHNhdWNlIChJIHVzZSBteSBob21lbWFkZSBzYXVjZSkiLCJt
+        ZXRhSW5mb3JtYXRpb24iOlsiaG9tZW1hZGUiLCJ5b3VyIGZhdm9yaXRlIiwi
+        KEkgdXNlIG15IHNhdWNlKSJdfV0sImlkIjo2NTQyNDEsInRpdGxlIjoiT3Zl
+        bi1CYWtlZCBGZXRhIENoZWVzZSBEaXAiLCJyZWFkeUluTWludXRlcyI6NDUs
+        ImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBlSW1hZ2Vz
+        L092ZW4tQmFrZWQtRmV0YS1DaGVlc2UtRGlwLTY1NDI0MS5qcGciLCJpbWFn
+        ZVR5cGUiOiJqcGciLCJpbnN0cnVjdGlvbnMiOiI8b2w+PGxpPlByZWhlYXQg
+        b3ZlbiBhdCA0MDAuPC9saT48bGk+SW4gYSBzbWFsbCBvdmVuLXNhZmUgYmFr
+        aW5nIGRpc2gsIG9yIGEgY2xheSBwb3QsIGxheWVyIHRoZSBjcnVtYmxlZCBj
+        aGVlc2UsIGNvdmVyaW5nIHRoZSBlbnRpcmUgYm90dG9tIG9mIHRoZSBkaXNo
+        LjwvbGk+PGxpPlNwcmlua2xlIHRoZSBtaW5jZWQgZ2FybGljIG9uIHRvcCBv
+        ZiB0aGUgZmV0YSBjaGVlc2UuPC9saT48bGk+U3Bvb24gdGhlIHRvbWF0byBz
+        YXVjZSwgY292ZXJpbmcgdGhlIGVudGlyZSBjaGVlc2UgYW5kIGdhcmxpYyBt
+        aXh0dXJlLjwvbGk+PGxpPk1peCB0b2dldGhlciB0aGUgbW96emFyZWxsYSBj
+        aGVlc2UgYW5kIHRoZSBjaGVkZGFyIGNoZWVzZTsgbGF5ZXIgb24gdG9wIG9m
+        IHRoZSB0b21hdG8gc2F1Y2UuPC9saT48bGk+QmFrZSBpdCBpbiB0aGUgb3Zl
+        biBmb3IgMTUgbWludXRlcywgb3IgdW50aWwgdGhlIGNoZWVzZSBpcyBtZWx0
+        ZWQuPC9saT48bGk+U2VydmUgaXQgd2FybSB3aXRoIGEgc2lkZSBvZiBmbGF0
+        YnJlYWQgb3IgdG9ydGlsbGEgY2hpcHMuPC9saT48L29sPiJ9
+    http_version: 
+  recorded_at: Wed, 21 Sep 2016 18:52:42 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/654887/information?includeNutrition=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/json
+      X-Mashape-Key:
+      - 7jflWBgwuhmshxOW7nJBlzydGliAp1jrXWmjsnIzU228ojsQkb
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow-Control-Allow-Methods:
+      - ": GET, HEAD, POST, OPTIONS, DELETE, PUT"
+      Allow-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Sep 2016 18:52:42 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Classifications-Limit:
+      - '10000'
+      X-Ratelimit-Classifications-Remaining:
+      - '10000'
+      X-Ratelimit-Requests-Limit:
+      - '500'
+      X-Ratelimit-Requests-Remaining:
+      - '470'
+      X-Ratelimit-Tinyrequests-Limit:
+      - '10000'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '9997'
+      Content-Length:
+      - '1008'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjpmYWxzZSwidmVnYW4iOmZhbHNlLCJnbHV0ZW5GcmVl
+        IjpmYWxzZSwiZGFpcnlGcmVlIjpmYWxzZSwidmVyeUhlYWx0aHkiOmZhbHNl
+        LCJjaGVhcCI6ZmFsc2UsInZlcnlQb3B1bGFyIjpmYWxzZSwic3VzdGFpbmFi
+        bGUiOmZhbHNlLCJ3ZWlnaHRXYXRjaGVyU21hcnRQb2ludHMiOjQsImdhcHMi
+        OiJubyIsImxvd0ZvZG1hcCI6ZmFsc2UsImtldG9nZW5pYyI6ZmFsc2UsIndo
+        b2xlMzAiOmZhbHNlLCJzZXJ2aW5ncyI6MTIsInNvdXJjZVVybCI6Imh0dHA6
+        Ly93d3cuZm9vZGlzdGEuY29tL3JlY2lwZS83Wkw1RjVHUy9wYXN0YS1zaGVs
+        bHMtd2l0aC1yaWNvdHRhLWNoZWVzZS1zdHVmZmluZyIsInNwb29uYWN1bGFy
+        U291cmNlVXJsIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcGFzdGEtc2hl
+        bGxzLXdpdGgtcmljb3R0YS1jaGVlc2Utc3R1ZmZpbmctNjU0ODg3IiwiYWdn
+        cmVnYXRlTGlrZXMiOjEsImNyZWRpdFRleHQiOiJGb29kaXN0YS5jb20g4oCT
+        IFRoZSBDb29raW5nIEVuY3ljbG9wZWRpYSBFdmVyeW9uZSBDYW4gRWRpdCIs
+        ImxpY2Vuc2UiOiJDQyBCWSAzLjAiLCJzb3VyY2VOYW1lIjoiRm9vZGlzdGEi
+        LCJleHRlbmRlZEluZ3JlZGllbnRzIjpbeyJpZCI6MTEwMjA0MjEsImFpc2xl
+        IjoiUGFzdGEgYW5kIFJpY2UiLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3Vs
+        YXIuY29tL2Nkbi9pbmdyZWRpZW50c18xMDB4MTAwL3NoZWxsLXBhc3RhLmpw
+        ZyIsIm5hbWUiOiJjb29rZWQgc2hlbGxzIiwiYW1vdW50IjoxNi4wLCJ1bml0
+        Ijoib3oiLCJ1bml0U2hvcnQiOiJveiIsInVuaXRMb25nIjoib3VuY2VzIiwi
+        b3JpZ2luYWxTdHJpbmciOiIxICgxNiBvei4pIGJveCBsZy4gc2hlbGxzLCBj
+        b29rZWQiLCJtZXRhSW5mb3JtYXRpb24iOlsibGcuIiwiY29va2VkIl19LHsi
+        aWQiOjExMjMsImFpc2xlIjoiTWlsaywgRWdncywgT3RoZXIgRGFpcnkiLCJp
+        bWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL2Nkbi9pbmdyZWRpZW50
+        c18xMDB4MTAwL2VnZy5qcGciLCJuYW1lIjoiZWdnIiwiYW1vdW50IjoxLjAs
+        InVuaXQiOiIiLCJ1bml0U2hvcnQiOiIiLCJ1bml0TG9uZyI6IiIsIm9yaWdp
+        bmFsU3RyaW5nIjoiMSBlZ2csIGxpZ2h0bHkgYmVhdGVuIiwibWV0YUluZm9y
+        bWF0aW9uIjpbImxpZ2h0bHkgYmVhdGVuIl19LHsiaWQiOjEwMDEwMTIzLCJh
+        aXNsZSI6Ik1lYXQiLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29t
+        L2Nkbi9pbmdyZWRpZW50c18xMDB4MTAwL3Byb3NjdWl0dG8uanBnIiwibmFt
+        ZSI6InByb3NjaXV0dG8iLCJhbW91bnQiOjAuMjUsInVuaXQiOiJjdXAiLCJ1
+        bml0U2hvcnQiOiJjIiwidW5pdExvbmciOiJjdXBzIiwib3JpZ2luYWxTdHJp
+        bmciOiIxLzQgY3VwIGRpY2VkIFByb3NjaXV0dG8sIGNvb2tlZCIsIm1ldGFJ
+        bmZvcm1hdGlvbiI6WyJkaWNlZCIsImNvb2tlZCJdfSx7ImlkIjoxMDM2LCJh
+        aXNsZSI6IkNoZWVzZSIsImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5j
+        b20vY2RuL2luZ3JlZGllbnRzXzEwMHgxMDAvcmljb3R0YS1jaGVlc2UuanBn
+        IiwibmFtZSI6InJpY290dGEgY2hlZXNlIiwiYW1vdW50IjoxLjAsInVuaXQi
+        OiJwb3VuZCIsInVuaXRTaG9ydCI6ImxiIiwidW5pdExvbmciOiJwb3VuZCIs
+        Im9yaWdpbmFsU3RyaW5nIjoiMSBwb3VuZCBSaWNvdHRhIGNoZWVzZSIsIm1l
+        dGFJbmZvcm1hdGlvbiI6W119LHsiaWQiOjExNTQ5LCJhaXNsZSI6IlBhc3Rh
+        IGFuZCBSaWNlIiwiaW1hZ2UiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9j
+        ZG4vaW5ncmVkaWVudHNfMTAweDEwMC90b21hdG8tc2F1Y2Utb3ItcGFzdGEt
+        c2F1Y2UuanBnIiwibmFtZSI6InRvbWF0byBzYXVjZSIsImFtb3VudCI6Mi4w
+        LCJ1bml0IjoiY3VwcyIsInVuaXRTaG9ydCI6ImMiLCJ1bml0TG9uZyI6ImN1
+        cHMiLCJvcmlnaW5hbFN0cmluZyI6IjIgY3VwcyBob3QgdG9tYXRvIHNhdWNl
+        IiwibWV0YUluZm9ybWF0aW9uIjpbImhvdCJdfV0sImlkIjo2NTQ4ODcsInRp
+        dGxlIjoiUGFzdGEgU2hlbGxzIFdpdGggUmljb3R0YSBDaGVlc2UgU3R1ZmZp
+        bmciLCJyZWFkeUluTWludXRlcyI6NDUsImltYWdlIjoiaHR0cHM6Ly9zcG9v
+        bmFjdWxhci5jb20vcmVjaXBlSW1hZ2VzL1Bhc3RhLVNoZWxscy1XaXRoLVJp
+        Y290dGEtQ2hlZXNlLVN0dWZmaW5nLTY1NDg4Ny5qcGciLCJpbWFnZVR5cGUi
+        OiJqcGciLCJpbnN0cnVjdGlvbnMiOiI8b2w+PGxpPlByZWhlYXQgb3ZlbiB0
+        byAzNTAgZGVncmVlcy4gQmVhdCBSaWNvdHRhLCBQcm9zY2l1dHRvIGFuZCBl
+        Z2cgdG9nZXRoZXIgaW4gYSBsYXJnZSBib3dsLiBTdHVmZiBhcHByb3hpbWF0
+        ZWx5IDIgdGFibGVzcG9vbnMgb2YgdGhlIGNoZWVzZSBtaXh0dXJlIGludG8g
+        ZWFjaCBzaGVsbCBhbmQgcGxhY2UgaW4gYSBiYWtpbmcgcGFuLiBDb3ZlciB3
+        aXRoIGFsdW1pbnVtIGZvaWwgYW5kIGJha2UgMTUgdG8gMjAgbWludXRlcy4g
+        QXJyYW5nZSBzaGVsbHMgb24gc2VydmluZyBwbGF0ZXMgYW5kIHBvdXIgaG90
+        IHNhdWNlIG92ZXIuPC9saT48L29sPiJ9
+    http_version: 
+  recorded_at: Wed, 21 Sep 2016 18:52:43 GMT
+recorded_with: VCR 3.0.3
