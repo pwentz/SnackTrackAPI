@@ -1,6 +1,8 @@
 class RecipeIngredient < ApplicationRecord
   belongs_to :recipe
   belongs_to :ingredient
+  validates :recipe_id, presence: true
+  validates :ingredient_id, presence: true
 
   def self.create_by_collection(aggregate_ingredient_data)
     # aggregate_ingredient_data.map do |raw_ingredient|

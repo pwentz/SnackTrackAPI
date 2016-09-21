@@ -11,14 +11,11 @@ RSpec.describe 'Recipes request', type: :request do
 
       recipes = JSON.parse(response.body)
       calzone = recipes.first
-      sample_ingredient = calzone['recipe_ingredients'].first
 
       expect(response).to have_http_status(200)
       expect(response.content_type).to eq('application/json')
       expect(calzone['title']).to eq('Sausage Calzone')
       expect(calzone['image']).to include('Sausage-Calzone')
-      expect(sample_ingredient['amount']).to eq('5 ounces')
-      expect(sample_ingredient['name']).to eq('pepperoni')
     end
   end
 end

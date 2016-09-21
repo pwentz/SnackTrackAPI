@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/api/v1/recipes/search', to: 'api/v1/recipes#index'
+  get '/api/v1/recipes/:recipe_id', to: 'api/v1/recipes#show'
 
   get '/api/v1/ingredients/search', to: 'api/v1/ingredients_search#index'
 
