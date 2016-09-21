@@ -5,7 +5,7 @@ class SpoonacularAutoCompleteService
     @connection.params['number'] = 5
   end
 
-  def autocomplete_call(search_terms)
+  def fetch_external_ingredients(search_terms)
     response = @connection.get do |req|
       req.params['query'] = search_terms
     end

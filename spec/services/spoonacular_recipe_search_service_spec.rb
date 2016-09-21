@@ -7,7 +7,7 @@ RSpec.describe SpoonacularRecipeSearchService, type: :service do
 
   it 'returns 5 recipes based on ingredient parameters' do
     VCR.use_cassette('spoonacular_recipe_search_service#find_by_apple') do
-      raw_ingredient_data = { '0': { 'name': 'apple', 'image': 'apple.png' } }
+      raw_ingredient_data = { '0'=> { 'name'=> 'apple', 'image'=> 'apple.png' } }
       raw_recipe_data = @service.recipe_match_api(raw_ingredient_data)
       raw_recipe = raw_recipe_data.first
 

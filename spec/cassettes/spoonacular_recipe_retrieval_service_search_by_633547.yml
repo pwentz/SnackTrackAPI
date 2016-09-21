@@ -33,7 +33,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 20 Sep 2016 00:51:16 GMT
+      - Tue, 20 Sep 2016 23:27:04 GMT
       Server:
       - Mashape/5.0.6
       X-Ratelimit-Classifications-Limit:
@@ -43,11 +43,11 @@ http_interactions:
       X-Ratelimit-Requests-Limit:
       - '500'
       X-Ratelimit-Requests-Remaining:
-      - '479'
+      - '424'
       X-Ratelimit-Tinyrequests-Limit:
       - '10000'
       X-Ratelimit-Tinyrequests-Remaining:
-      - '9938'
+      - '9714'
       Content-Length:
       - '901'
       Connection:
@@ -102,5 +102,5 @@ http_interactions:
         ITwvbGk+PGxpPlVzZSBPcmdhbmljIEluZ3JlZGllbnRzIGlmIEF2YWlsYWJs
         ZTwvbGk+PC9vbD4ifQ==
     http_version: 
-  recorded_at: Tue, 20 Sep 2016 00:51:17 GMT
+  recorded_at: Tue, 20 Sep 2016 23:27:04 GMT
 recorded_with: VCR 3.0.3
