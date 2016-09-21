@@ -22,36 +22,54 @@ class Ingredient < ApplicationRecord
     end
   end
 
-  def self.find_by_name(search_terms)
-    where("name LIKE ?", "%#{search_terms}%").first(5)
-  end
-
-  def self.create_by_collection(raw_ingredients)
-    raw_ingredients.map do |raw_ingredient|
-      create(raw_ingredient)
+  class << self
+    def service
+      SpoonacularAutoCompleteService.new
     end
-  end
 
-  def self.find_or_create(raw_ingredient)
-    ingredient = find_by(name: raw_ingredient['name'])
-    if ingredient
-      ingredient
-    else
-      new_ingredient = create(
-        name: raw_ingredient['name'],
-        image: raw_ingredient['image']
-      )
-      identify_potential_counterparts(new_ingredient)
+    def find_by_name(search_terms)
+      where("name LIKE ?", "%#{search_terms}%").first(5)
     end
-  end
 
-  def self.identify_potential_counterparts(new_ingredient)
-    if new_ingredient.errors.full_messages.include?('Name cannot have singular counterparts')
-      Ingredient.find_by(name: new_ingredient['name'].singularize)
-    elsif new_ingredient.errors.full_messages.include?('Name cannot have plural counterparts')
-      Ingredient.find_by(name: new_ingredient['name'].pluralize)
-    else
-      new_ingredient
+    def create_by_collection(raw_ingredients)
+      raw_ingredients.map do |raw_ingredient|
+        create(raw_ingredient)
+      end
+    end
+
+    def find_or_create(raw_ingredient)
+      ingredient = find_by(name: raw_ingredient['name'])
+      if ingredient
+        ingredient
+      else
+        new_ingredient = create(
+          name: raw_ingredient['name'],
+          image: raw_ingredient['image']
+        )
+        identify_potential_counterparts(new_ingredient)
+      end
+    end
+
+    def identify_potential_counterparts(new_ingredient)
+      if new_ingredient.errors.full_messages.include?('Name cannot have singular counterparts')
+        Ingredient.find_by(name: new_ingredient['name'].singularize)
+      elsif new_ingredient.errors.full_messages.include?('Name cannot have plural counterparts')
+        Ingredient.find_by(name: new_ingredient['name'].pluralize)
+      else
+        new_ingredient
+      end
+    end
+
+    def where_name(search_terms)
+      cached_results = find_by_name(search_terms)
+      # USE INGREDIENTS ALREADY IN DB TO LIMIT API CALLS
+      if cached_results.count == 5
+        cached_results
+      else
+        raw_ingredients = service.fetch_external_ingredients(search_terms)
+        create_by_collection(raw_ingredients)
+        find_by_name(search_terms)
+      end
     end
   end
 end

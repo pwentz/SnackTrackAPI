@@ -6,7 +6,7 @@ class SpoonacularRecipeSearchService
   end
 
   def recipe_match_api(raw_ingredients_data)
-    ingredient_names = raw_ingredients_data.values.pluck(:name)
+    ingredient_names = raw_ingredients_data.values.pluck('name')
     ingredient_params = ingredient_names.reduce('') do |res, ing|
       res += "#{ing},"
     end
