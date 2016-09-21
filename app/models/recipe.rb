@@ -23,14 +23,14 @@ class Recipe < ApplicationRecord
       aggregate_recipe_data.map do |recipe_data|
         recipe = Recipe.create(
           title: recipe_data['title'],
-          image: recipe_data['image']
+          image: recipe_data['image'],
+          spoonacular_id: recipe_data['id']
         )
         recipe.find_and_create_ingredients(recipe_data['missedIngredients']) if recipe_data['missedIngredients']
         recipe.find_and_create_ingredients(recipe_data['usedIngredients']) if recipe_data['usedIngredients']
         recipe
       end
     end
-
 
     def find_by_ingredients(raw_ingredients)
       select('recipes.*').
@@ -42,14 +42,32 @@ class Recipe < ApplicationRecord
     end
   end
 
+  def instruction_service
+    @instruction_service ||= SpoonacularRecipeInstructionService.new
+  end
+
   def find_and_create_ingredients(raw_ingredient_data)
     raw_ingredient_data.each do |raw_ingredient|
-      ingredient= Ingredient.find_or_create(raw_ingredient)
+      ingredient = Ingredient.find_or_create(raw_ingredient)
       recipe_ingredients.create(
         ingredient: ingredient,
         unit: raw_ingredient['unit'],
         amount: raw_ingredient['amount']
       )
     end
+  end
+
+  def update_instructions
+    if instructions.nil? || instructions.empty?
+      raw_steps = instruction_service.get_instructions(spoonacular_id)
+      require 'pry'; binding.pry
+      update_attribute(:instructions, format_instructions(raw_steps))
+    end
+  end
+
+  def format_instructions(raw_steps)
+    raw_steps.first['steps'].reduce('') do |result, instruction|
+      result += "#{instruction['step']} "
+    end.strip
   end
 end

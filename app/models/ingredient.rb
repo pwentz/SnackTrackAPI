@@ -52,9 +52,9 @@ class Ingredient < ApplicationRecord
 
     def identify_potential_counterparts(new_ingredient)
       if new_ingredient.errors.full_messages.include?('Name cannot have singular counterparts')
-        Ingredient.find_by(name: new_ingredient['name'].singularize)
+        Ingredient.find_by(name: new_ingredient.name.singularize)
       elsif new_ingredient.errors.full_messages.include?('Name cannot have plural counterparts')
-        Ingredient.find_by(name: new_ingredient['name'].pluralize)
+        Ingredient.find_by(name: new_ingredient.name.pluralize)
       else
         new_ingredient
       end

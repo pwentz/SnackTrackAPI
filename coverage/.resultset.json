@@ -146,10 +146,10 @@
         null,
         null,
         null,
-        11,
-        11,
-        11,
         null,
+        11,
+        11,
+        11,
         null,
         null,
         null,
@@ -164,6 +164,10 @@
         null,
         null,
         1,
+        0,
+        null,
+        null,
+        1,
         21,
         56,
         56,
@@ -171,6 +175,13 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -258,6 +269,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         1,
         null,
@@ -339,28 +352,25 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
         null,
         null
       ],
-      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/serializers/recipe_serializer.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/serializers/recipe_ingredient_serializer.rb": [
-        1,
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/serializers/short_recipe_serializer.rb": [
         1,
         1,
         1,
         null,
-        null,
         1,
-        27,
-        null,
-        null,
-        1,
-        27,
+        5,
         null,
         null
       ],
@@ -374,13 +384,48 @@
         null,
         null
       ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/serializers/long_recipe_serializer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/serializers/recipe_ingredient_serializer.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/serializers/user_serializer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/patrickwentz/Desktop/turing/Module3/projects/SnackTrack/SnackTrackAPI/app/services/spoonacular_recipe_instruction_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1474492252
+    "timestamp": 1474497047
   }
 }
