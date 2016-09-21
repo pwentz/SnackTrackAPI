@@ -43,23 +43,23 @@ RSpec.describe Recipe, type: :model do
       expect(pork_chops).not_to be_in(cheese_recipes)
       expect(pork_chops).not_to be_in(garlic_recipes)
     end
+  end
 
-    it 'creates recipes and related ingredients when given raw data' do
-      raw_recipe_data = [ { 'title'=>'mac n cheese',
-                          'readyInMinutes'=>45,
-                          'image'=>'mac.jpg',
-                          'extendedIngredients'=>
-                            [ {'name'=>'pasta', 'image'=>'pasta.jpg'},
-                             {'name'=>'cheese', 'image'=>'cheese.jpg'} ] } ]
-      result = Recipe.create_recipes(raw_recipe_data)
-      recipe = result.first
-      recipe_ingredients = recipe.ingredients.pluck(:name)
+  it 'creates recipes and related ingredients when given raw data' do
+    raw_recipe_data = [ { 'title'=>'mac n cheese',
+                        'readyInMinutes'=>45,
+                        'image'=>'mac.jpg',
+                        'extendedIngredients'=>
+                          [ {'name'=>'pasta', 'image'=>'pasta.jpg'},
+                           {'name'=>'cheese', 'image'=>'cheese.jpg'} ] } ]
+    result = Recipe.create_recipes(raw_recipe_data)
+    recipe = result.first
+    recipe_ingredients = recipe.ingredients.pluck(:name)
 
-      expect(result.count).to eq(1)
-      expect(recipe.title).to eq('mac n cheese')
-      expect(recipe_ingredients.count).to eq(2)
-      expect('pasta').to be_in(recipe_ingredients)
-      expect('cheese').to be_in(recipe_ingredients)
-    end
+    expect(result.count).to eq(1)
+    expect(recipe.title).to eq('mac n cheese')
+    expect(recipe_ingredients.count).to eq(2)
+    expect('pasta').to be_in(recipe_ingredients)
+    expect('cheese').to be_in(recipe_ingredients)
   end
 end

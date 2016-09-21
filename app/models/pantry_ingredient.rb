@@ -7,7 +7,7 @@ class PantryIngredient < ApplicationRecord
       raw_ingredient_data.each do |raw_ingredient|
         pantry_item = find_by_ingredient_name(raw_ingredient['name'])
         raw_amount = raw_ingredient['amount'].split(' ').first.to_i if raw_ingredient['amount']
-        if !raw_amount || raw_amount <= 1
+        if raw_amount > pantry_item.amount || pantry_item.amount <= 1
           pantry_item.destroy
         else
           pantry_item.update_attribute(:amount, pantry_item.amount - raw_amount)

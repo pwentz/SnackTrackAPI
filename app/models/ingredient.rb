@@ -28,7 +28,7 @@ class Ingredient < ApplicationRecord
     end
 
     def find_by_name(search_terms)
-      where("name LIKE ?", "%#{search_terms}%").first(5)
+      where("name LIKE ?", "%#{search_terms}%").limit(5)
     end
 
     def create_by_collection(raw_ingredients)

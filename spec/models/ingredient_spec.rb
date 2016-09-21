@@ -11,12 +11,24 @@ describe Ingredient, type: :model do
       VCR.use_cassette('ingredient_model_autocomplete#a') do
         search_query = 'a'
         ingredients = Ingredient.where_name(search_query)
-        sample_ingredient_name = ingredients.first['name']
 
         expect(ingredients.count).to eq(5)
-        expect(sample_ingredient_name[0]).to eq('a')
+        expect(
+          ingredients.all?{ |ingredient| ingredient.name[0] == 'a' }
+        ).to be_truthy
         expect(Ingredient.count).to eq(5)
       end
+    end
+
+    it 'can return matching ingredients in database when passed params' do
+      search_query = 'a'
+      existing_a_ingredients = create_list(:ingredient, 5)
+      ingredients = Ingredient.where_name(search_query)
+
+      expect(
+        ingredients.all?{ |ingredient| ingredient.name[0] == 'a' }
+      ).to be_truthy
+      expect(ingredients).to eq(existing_a_ingredients)
     end
 
     it 'can auto-complete search without enlisting service' do
@@ -33,7 +45,7 @@ describe Ingredient, type: :model do
     end
 
     it 'can find existing ingredient or create new one given a name' do
-      existing_ingredient = create(:ingredient)
+      existing_ingredient = create(:ingredient, name: 'apple')
       familiar_ingredient_params = { 'name' => 'apple', 'image' => 'apple.jpg' }
       unfamiliar_params = { 'name' => 'beef', 'image' => 'beef.jpg' }
 
@@ -47,7 +59,7 @@ describe Ingredient, type: :model do
     end
 
     it 'can identify existing ingredient when passed plural counterpart' do
-      existing_ingredient = create(:ingredient)
+      existing_ingredient = create(:ingredient, name: 'apple')
       invalid_plural_counterpart = build(:ingredient, name: 'apples')
       invalid_plural_counterpart.save
 
@@ -55,9 +67,9 @@ describe Ingredient, type: :model do
         Ingredient.identify_potential_counterparts(invalid_plural_counterpart)
       ).to eq(existing_ingredient)
 
-      expect(
-        invalid_plural_counterpart.errors.full_messages.first
-      ).to eq('Name cannot have singular counterparts')
+      expect{
+        invalid_plural_counterpart.save!
+      }.to raise_error(ActiveRecord::RecordInvalid)
     end
 
     it 'can identify existing ingredient when passed singular counterpart' do
