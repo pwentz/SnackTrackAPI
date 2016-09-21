@@ -8,34 +8,29 @@ class Recipe < ApplicationRecord
       SpoonacularRecipeSearchService.new
     end
 
-    def retrieval_service
-      SpoonacularRecipeRetrievalService.new
-    end
-
     def where_ingredients(ingredients)
       cached_recipes = find_by_ingredients(ingredients.values)
       # USE RECIPES ALREADY IN DB TO LIMIT API CALLS
       if cached_recipes.length == 5
         cached_recipes
       else
-        simple_recipe_data = search_service.recipe_match_api(ingredients)
-        recipe_ids = simple_recipe_data.pluck('id')
-        aggregate_recipe_data = retrieval_service.detailed_recipe_data(recipe_ids)
+        aggregate_recipe_data = search_service.recipe_match_api(ingredients)
         create_recipes(aggregate_recipe_data)
       end
     end
 
     def create_recipes(aggregate_recipe_data)
       aggregate_recipe_data.map do |recipe_data|
-        recipe = create(
+        recipe = Recipe.create(
           title: recipe_data['title'],
-          ready_time: recipe_data['readyInMinutes'],
           image: recipe_data['image']
         )
-        recipe.recipe_ingredients.create_by_collection(recipe_data['extendedIngredients'])
+        recipe.find_and_create_ingredients(recipe_data['missedIngredients']) if recipe_data['missedIngredients']
+        recipe.find_and_create_ingredients(recipe_data['usedIngredients']) if recipe_data['usedIngredients']
         recipe
       end
     end
+
 
     def find_by_ingredients(raw_ingredients)
       select('recipes.*').
@@ -44,6 +39,17 @@ class Recipe < ApplicationRecord
               raw_ingredients.pluck('name')).
         distinct.
         limit(5)
+    end
+  end
+
+  def find_and_create_ingredients(raw_ingredient_data)
+    raw_ingredient_data.each do |raw_ingredient|
+      ingredient= Ingredient.find_or_create(raw_ingredient)
+      recipe_ingredients.create(
+        ingredient: ingredient,
+        unit: raw_ingredient['unit'],
+        amount: raw_ingredient['amount']
+      )
     end
   end
 end

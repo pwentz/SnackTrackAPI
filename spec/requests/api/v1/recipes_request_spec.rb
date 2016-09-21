@@ -16,10 +16,9 @@ RSpec.describe 'Recipes request', type: :request do
       expect(response).to have_http_status(200)
       expect(response.content_type).to eq('application/json')
       expect(calzone['title']).to eq('Sausage Calzone')
-      expect(calzone['ready_time']).to eq(45)
       expect(calzone['image']).to include('Sausage-Calzone')
-      expect(sample_ingredient['amount']).to eq('1 T')
-      expect(sample_ingredient['name']).to eq('basil')
+      expect(sample_ingredient['amount']).to eq('5 ounces')
+      expect(sample_ingredient['name']).to eq('pepperoni')
     end
   end
 end

@@ -3,6 +3,7 @@ class SpoonacularRecipeSearchService
     @conn = Faraday.new('https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients')
     @conn.headers['X-MASHAPE-KEY'] = ENV['spoonacular_key']
     @conn.params['number'] = 5
+    @conn.params['fillIngredients'] = true
   end
 
   def recipe_match_api(raw_ingredients_data)

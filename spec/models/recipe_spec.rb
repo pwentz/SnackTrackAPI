@@ -49,7 +49,7 @@ RSpec.describe Recipe, type: :model do
     raw_recipe_data = [ { 'title'=>'mac n cheese',
                         'readyInMinutes'=>45,
                         'image'=>'mac.jpg',
-                        'extendedIngredients'=>
+                        'usedIngredients'=>
                           [ {'name'=>'pasta', 'image'=>'pasta.jpg'},
                            {'name'=>'cheese', 'image'=>'cheese.jpg'} ] } ]
     result = Recipe.create_recipes(raw_recipe_data)
