@@ -3,7 +3,7 @@ class PantryIngredient < ApplicationRecord
   belongs_to :ingredient
 
   class << self
-    def update_pantry(raw_ingredient_data)
+    def remove_from_pantry(raw_ingredient_data)
       raw_ingredient_data.each do |raw_ingredient|
         pantry_item = find_by_ingredient_name(raw_ingredient['name'])
         raw_amount = raw_ingredient['amount'].split(' ').first.to_i if raw_ingredient['amount']
