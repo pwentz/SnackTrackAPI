@@ -13,7 +13,7 @@ describe User, type: :model do
                        'amount' => '1',
                        'ingredient_id' => existing_apple.id }
     expect{
-      current_user.update_pantry(user_id_params)
+      current_user.add_to_pantry(user_id_params)
     }.to change{
       current_user.ingredients.count
     }.from(0).to(1)
@@ -31,7 +31,7 @@ describe User, type: :model do
                        'amount' => '2',
                        'ingredient_id' => apple.id }
 
-    current_user.update_pantry(user_id_params)
+    current_user.add_to_pantry(user_id_params)
 
     expect{
       pantry_apple_instance.reload

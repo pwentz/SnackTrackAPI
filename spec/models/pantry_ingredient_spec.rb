@@ -24,7 +24,7 @@ RSpec.describe PantryIngredient, type: :model do
 
 
     expect{
-      current_user.pantry_ingredients.update_pantry(recipe_params)
+      current_user.pantry_ingredients.remove_from_pantry(recipe_params)
     }.to change{
       current_user.pantry_ingredients.count
     }.from(2).to(1)
@@ -51,7 +51,7 @@ RSpec.describe PantryIngredient, type: :model do
 
     recipe_params = [ { 'name' => cheese.name, 'amount' => "1 q" } ]
     cheese_pantry_ingredient = cheese.pantry_ingredients.first
-    current_user.pantry_ingredients.update_pantry(recipe_params)
+    current_user.pantry_ingredients.remove_from_pantry(recipe_params)
 
     expect{
       cheese_pantry_ingredient.reload

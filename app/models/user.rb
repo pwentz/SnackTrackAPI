@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :ingredients, through: :pantry_ingredients
   validates :google_id, presence: true, uniqueness: true
 
-  def update_pantry(params)
+  def add_to_pantry(params)
     ingredient = Ingredient.find_by(id: params['ingredient_id'])
     if ingredients.exists?(ingredient.id)
       existing_pi = pantry_ingredients.find_by(ingredient: ingredient.id)
