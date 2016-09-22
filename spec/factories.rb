@@ -19,6 +19,12 @@ FactoryGirl.define do
     title
     ready_time 45
     image 'macncheese.jpg'
+    spoonacular_id
+    instructions 'Preheat the oven'
+  end
+
+  sequence :spoonacular_id do |i|
+    "1696#{i}"
   end
 
   sequence :title do |i|

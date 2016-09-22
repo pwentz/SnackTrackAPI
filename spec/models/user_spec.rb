@@ -39,4 +39,28 @@ describe User, type: :model do
       pantry_apple_instance.amount
     }.from(1).to(3)
   end
+
+  context 'can find existing user or create a new one given params' do
+    it 'can return existing user' do
+      current_user = create(
+        :user,
+        first_name: 'Fred',
+        google_id: '1234'
+      )
+      user_params = { 'googleId' => '1234' }
+
+      expect(
+        User.find_or_create(user_params)
+      ).to eq(current_user)
+    end
+
+    it 'can create new user when none exist' do
+      user_params = { 'googleId' => '1234', 'userName' => 'Fred'}
+      new_user = User.find_or_create(user_params)
+
+      expect(
+        new_user
+      ).to be_a_new_record
+    end
+  end
 end
