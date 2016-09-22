@@ -2,6 +2,7 @@ class Recipe < ApplicationRecord
   has_many :recipe_ingredients
   has_many :ingredients, through: :recipe_ingredients
   validates :title, presence: true, uniqueness: true
+  validates :spoonacular_id, uniqueness: true
 
   class << self
     def search_service
@@ -60,7 +61,6 @@ class Recipe < ApplicationRecord
   def update_instructions
     if instructions.nil? || instructions.empty?
       raw_steps = instruction_service.get_instructions(spoonacular_id)
-      require 'pry'; binding.pry
       update_attribute(:instructions, format_instructions(raw_steps))
     end
   end

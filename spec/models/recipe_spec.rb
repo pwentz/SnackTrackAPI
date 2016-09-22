@@ -12,8 +12,27 @@ RSpec.describe Recipe, type: :model do
         sample_recipe = matching_recipes.first['title']
 
         expect(matching_recipes.count).to eq(5)
+        expect(Recipe.count).to eq(5)
+        expect(matching_recipes.sort).to eq(Recipe.all)
         expect(sample_recipe).to eq('Sausage Calzone')
       end
+    end
+
+    it 'can look for existing recipes before enlisting service' do
+      cheese = create(:ingredient, name: 'cheese')
+      recipes = create_list(:recipe, 5)
+      5.times do |i|
+        create(
+          :recipe_ingredient,
+          ingredient: cheese,
+          recipe: recipes[i]
+        )
+      end
+      ingredient_params = { "0"=>{"amount"=>"1", "name"=>"cheese", "id"=>"#{cheese.id}"} }
+
+      matching_recipes = Recipe.where_ingredients(ingredient_params)
+
+      expect(recipes.sort).to eq(matching_recipes.sort)
     end
 
     it 'finds recipes by ingredients without external service' do
@@ -61,5 +80,18 @@ RSpec.describe Recipe, type: :model do
     expect(recipe_ingredients.count).to eq(2)
     expect('pasta').to be_in(recipe_ingredients)
     expect('cheese').to be_in(recipe_ingredients)
+  end
+
+  it 'can update instructions using a service' do
+    VCR.use_cassette('recipe_model_spec#instruction_service') do
+      recipe = create(:recipe,
+                      spoonacular_id: 16962,
+                      instructions: '')
+
+      expect{
+        recipe.update_instructions
+      }.to change{recipe.instructions.length}.from(0).to(931)
+      expect(recipe.instructions).to include('Cook macaroni until very firm.')
+    end
   end
 end
