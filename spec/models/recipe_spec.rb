@@ -11,8 +11,8 @@ RSpec.describe Recipe, type: :model do
         matching_recipes = Recipe.where_ingredients(ingredient_params)
         sample_recipe = matching_recipes.first['title']
 
-        expect(matching_recipes.count).to eq(5)
-        expect(Recipe.count).to eq(5)
+        expect(matching_recipes.count).to eq(6)
+        expect(Recipe.count).to eq(6)
         expect(matching_recipes.sort).to eq(Recipe.all)
         expect(sample_recipe).to eq('Sausage Calzone')
       end
@@ -20,8 +20,8 @@ RSpec.describe Recipe, type: :model do
 
     it 'can look for existing recipes before enlisting service' do
       cheese = create(:ingredient, name: 'cheese')
-      recipes = create_list(:recipe, 5)
-      5.times do |i|
+      recipes = create_list(:recipe, 6)
+      6.times do |i|
         create(
           :recipe_ingredient,
           ingredient: cheese,
@@ -66,7 +66,6 @@ RSpec.describe Recipe, type: :model do
 
   it 'creates recipes and related ingredients when given raw data' do
     raw_recipe_data = [ { 'title'=>'mac n cheese',
-                        'readyInMinutes'=>45,
                         'image'=>'mac.jpg',
                         'usedIngredients'=>
                           [ {'name'=>'pasta', 'image'=>'pasta.jpg'},

@@ -33,7 +33,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 21 Sep 2016 21:02:55 GMT
+      - Thu, 22 Sep 2016 13:21:56 GMT
       Server:
       - Mashape/5.0.6
       X-Ratelimit-Classifications-Limit:
@@ -43,11 +43,11 @@ http_interactions:
       X-Ratelimit-Requests-Limit:
       - '500'
       X-Ratelimit-Requests-Remaining:
-      - '390'
+      - '457'
       X-Ratelimit-Tinyrequests-Limit:
       - '10000'
       X-Ratelimit-Tinyrequests-Remaining:
-      - '9966'
+      - '9913'
       Content-Length:
       - '114'
       Connection:
@@ -56,5 +56,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '[{"name":"ale","image":"no.jpg"},{"name":"alum","image":"white-powder.jpg"},{"name":"agar","image":"white-powder.jpg"},{"name":"agave","image":"maple-syrup-or-agave-nectar.jpg"},{"name":"aioli","image":"aioli.jpg"}]'
     http_version: 
-  recorded_at: Wed, 21 Sep 2016 21:02:55 GMT
+  recorded_at: Thu, 22 Sep 2016 13:21:56 GMT
 recorded_with: VCR 3.0.3

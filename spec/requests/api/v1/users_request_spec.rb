@@ -21,7 +21,7 @@ RSpec.describe 'request for user', type: :request do
     )
     user_params = { 'userName' => current_user.first_name, 'googleId' => current_user.google_id}
 
-    post '/api/v1/users/sign_in', params:  user_params
+    post '/api/v1/users', params:  user_params
 
     existing_user_ingredients = JSON.parse(response.body)
     sample_ingredient = existing_user_ingredients.first
@@ -36,7 +36,7 @@ RSpec.describe 'request for user', type: :request do
   it "returns a new user's blank pantry" do
     user_params = { 'googleId' => '1234', 'userName' => 'Fred' }
 
-    post '/api/v1/users/sign_in', params:  user_params
+    post '/api/v1/users', params:  user_params
 
     returned_user_ingredients = JSON.parse(response.body)
 

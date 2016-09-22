@@ -7,7 +7,7 @@ RSpec.describe 'Recipes request', type: :request do
                             "1"=>{"amount"=>"1", "name"=>"tomato sauce", "id"=>"393"},
                             "2"=>{"amount"=>"1", "name"=>"shredded cheese", "id"=>"508"} }
 
-      get '/api/v1/recipes/search.json', params: { 'ingredients' => ingredient_params }
+      get '/api/v1/recipes.json', params: { 'ingredients' => ingredient_params }
 
       recipes = JSON.parse(response.body)
       calzone = recipes.first
