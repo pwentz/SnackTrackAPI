@@ -20,4 +20,4 @@
 /config/application.yml
 
 # Ignore VCR cassettes
-/spec/cassettes/
+/spec/cassettes/*
