@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=true&ingredients=pasta%20dough,tomato%20sauce,shredded%20cheese,&number=5
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=true&ingredients=pasta%20dough,tomato%20sauce,shredded%20cheese,&number=6
     body:
       encoding: US-ASCII
       string: ''
@@ -33,7 +33,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 21 Sep 2016 21:02:55 GMT
+      - Thu, 22 Sep 2016 13:21:57 GMT
       Server:
       - Mashape/5.0.6
       X-Ratelimit-Classifications-Limit:
@@ -43,13 +43,13 @@ http_interactions:
       X-Ratelimit-Requests-Limit:
       - '500'
       X-Ratelimit-Requests-Remaining:
-      - '389'
+      - '456'
       X-Ratelimit-Tinyrequests-Limit:
       - '10000'
       X-Ratelimit-Tinyrequests-Remaining:
-      - '9966'
+      - '9913'
       Content-Length:
-      - '1590'
+      - '1757'
       Connection:
       - keep-alive
     body:
@@ -95,7 +95,14 @@ http_interactions:
         cheese","originalString":"1 pound Ricotta cheese","metaInformation":[],"image":"https://spoonacular.com/cdn/ingredients_100x100/ricotta-cheese.jpg"},{"id":11020421,"amount":16.0,"unit":"oz","unitLong":"ounces","unitShort":"oz","aisle":"Pasta
         and Rice","name":"cooked shells","originalString":"1 (16 oz.) box lg. shells,
         cooked","metaInformation":["lg.","cooked"],"image":"https://spoonacular.com/cdn/ingredients_100x100/shell-pasta.jpg"}],"usedIngredients":[{"id":11549,"amount":1.0,"unit":"serving","unitLong":"serving","unitShort":"serving","aisle":"Pasta
+        and Rice","name":"tomato sauce","originalString":"tomato sauce","metaInformation":[],"image":"https://spoonacular.com/cdn/ingredients_100x100/tomato-sauce-or-pasta-sauce.jpg"}],"likes":1},{"id":655592,"title":"Penne
+        With Goat Cheese and Zucchini","image":"https://spoonacular.com/recipeImages/Penne-With-Goat-Cheese-and-Zucchini-655592.jpg","imageType":"jpg","usedIngredientCount":1,"missedIngredientCount":4,"missedIngredients":[{"id":11282,"amount":1.0,"unit":"","unitLong":"","unitShort":"","aisle":"Produce","name":"onion","originalString":"1
+        Onion","metaInformation":[],"image":"https://spoonacular.com/cdn/ingredients_100x100/brown-onion.jpg"},{"id":11477,"amount":1.0,"unit":"","unitLong":"","unitShort":"","aisle":"Produce","name":"zucchini","originalString":"1
+        small zucchini, cubed","metaInformation":["small","cubed"],"image":"https://spoonacular.com/cdn/ingredients_100x100/zucchini.jpg"},{"id":11120420,"amount":1.0,"unit":"box","unitLong":"box","unitShort":"box","aisle":"Pasta
+        and Rice","name":"penne pasta","originalString":"1 box Whole Wheat Penne Pasta","metaInformation":["whole
+        wheat"],"extendedName":"whole wheat penne pasta","image":"https://spoonacular.com/cdn/ingredients_100x100/penne.jpg"},{"id":11215,"amount":3.0,"unit":"cloves","unitLong":"cloves","unitShort":"cloves","aisle":"Produce","name":"garlic","originalString":"3
+        cloves of Garlic","metaInformation":[],"image":"https://spoonacular.com/cdn/ingredients_100x100/garlic.jpg"}],"usedIngredients":[{"id":11549,"amount":1.0,"unit":"serving","unitLong":"serving","unitShort":"serving","aisle":"Pasta
         and Rice","name":"tomato sauce","originalString":"tomato sauce","metaInformation":[],"image":"https://spoonacular.com/cdn/ingredients_100x100/tomato-sauce-or-pasta-sauce.jpg"}],"likes":1}]'
     http_version: 
-  recorded_at: Wed, 21 Sep 2016 21:02:55 GMT
+  recorded_at: Thu, 22 Sep 2016 13:21:57 GMT
 recorded_with: VCR 3.0.3

@@ -33,7 +33,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 21 Sep 2016 21:02:56 GMT
+      - Thu, 22 Sep 2016 13:21:58 GMT
       Server:
       - Mashape/5.0.6
       X-Ratelimit-Classifications-Limit:
@@ -43,11 +43,11 @@ http_interactions:
       X-Ratelimit-Requests-Limit:
       - '500'
       X-Ratelimit-Requests-Remaining:
-      - '389'
+      - '455'
       X-Ratelimit-Tinyrequests-Limit:
       - '10000'
       X-Ratelimit-Tinyrequests-Remaining:
-      - '9965'
+      - '9912'
       Content-Length:
       - '90'
       Connection:
@@ -56,5 +56,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '[{"name":"apple","image":"apple.jpg"},{"name":"apples","image":"apple.jpg"},{"name":"apricot","image":"apricot.jpg"},{"name":"apricots","image":"apricot.jpg"},{"name":"applejack","image":"calvados.jpg"}]'
     http_version: 
-  recorded_at: Wed, 21 Sep 2016 21:02:56 GMT
+  recorded_at: Thu, 22 Sep 2016 13:21:58 GMT
 recorded_with: VCR 3.0.3

@@ -33,7 +33,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 22 Sep 2016 10:34:47 GMT
+      - Thu, 22 Sep 2016 13:21:59 GMT
       Server:
       - Mashape/5.0.6
       X-Ratelimit-Classifications-Limit:
@@ -43,11 +43,11 @@ http_interactions:
       X-Ratelimit-Requests-Limit:
       - '500'
       X-Ratelimit-Requests-Remaining:
-      - '471'
+      - '454'
       X-Ratelimit-Tinyrequests-Limit:
       - '10000'
       X-Ratelimit-Tinyrequests-Remaining:
-      - '9935'
+      - '9912'
       Content-Length:
       - '1388'
       Connection:
@@ -94,5 +94,5 @@ http_interactions:
         wrap","image":"https://spoonacular.com/cdn/equipment_100x100/plastic-wrap.jpg"},{"id":404783,"name":"bowl","image":"https://spoonacular.com/cdn/equipment_100x100/bowl.jpg"}]},{"number":4,"step":"Remove
         from the refrigerator about 30 minutes before using to soften.","ingredients":[],"equipment":[]}]}]'
     http_version: 
-  recorded_at: Thu, 22 Sep 2016 10:34:47 GMT
+  recorded_at: Thu, 22 Sep 2016 13:21:59 GMT
 recorded_with: VCR 3.0.3

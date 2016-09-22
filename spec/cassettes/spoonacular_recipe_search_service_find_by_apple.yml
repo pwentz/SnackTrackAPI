@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=true&ingredients=apple,&number=5
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=true&ingredients=apple,&number=6
     body:
       encoding: US-ASCII
       string: ''
@@ -33,7 +33,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 21 Sep 2016 21:02:57 GMT
+      - Thu, 22 Sep 2016 13:21:59 GMT
       Server:
       - Mashape/5.0.6
       X-Ratelimit-Classifications-Limit:
@@ -43,13 +43,13 @@ http_interactions:
       X-Ratelimit-Requests-Limit:
       - '500'
       X-Ratelimit-Requests-Remaining:
-      - '388'
+      - '453'
       X-Ratelimit-Tinyrequests-Limit:
       - '10000'
       X-Ratelimit-Tinyrequests-Remaining:
-      - '9965'
+      - '9912'
       Content-Length:
-      - '1057'
+      - '1235'
       Connection:
       - keep-alive
     body:
@@ -187,7 +187,37 @@ http_interactions:
         cnQiOiJzZXJ2aW5nIiwiYWlzbGUiOiJQcm9kdWNlIiwibmFtZSI6ImFwcGxl
         Iiwib3JpZ2luYWxTdHJpbmciOiJhcHBsZSIsIm1ldGFJbmZvcm1hdGlvbiI6
         W10sImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vY2RuL2luZ3Jl
-        ZGllbnRzXzEwMHgxMDAvYXBwbGUuanBnIn1dLCJsaWtlcyI6MX1d
+        ZGllbnRzXzEwMHgxMDAvYXBwbGUuanBnIn1dLCJsaWtlcyI6MX0seyJpZCI6
+        NjYyMTc1LCJ0aXRsZSI6IlN1Z2FyLUZyZWUgQXBwbGUgYW5kIENpbm5hbW9u
+        IEphbSIsImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBl
+        SW1hZ2VzL1N1Z2FyLUZyZWUtQXBwbGUtYW5kLUNpbm5hbW9uLUphbS02NjIx
+        NzUuanBnIiwiaW1hZ2VUeXBlIjoianBnIiwidXNlZEluZ3JlZGllbnRDb3Vu
+        dCI6MSwibWlzc2VkSW5ncmVkaWVudENvdW50IjozLCJtaXNzZWRJbmdyZWRp
+        ZW50cyI6W3siaWQiOjIwMTAsImFtb3VudCI6MS4wLCJ1bml0IjoidGVhc3Bv
+        b24iLCJ1bml0TG9uZyI6InRlYXNwb29uIiwidW5pdFNob3J0IjoidCIsImFp
+        c2xlIjoiU3BpY2VzIGFuZCBTZWFzb25pbmdzIiwibmFtZSI6ImNpbm5hbW9u
+        IHBvd2RlciIsIm9yaWdpbmFsU3RyaW5nIjoiMSB0ZWFzcG9vbiBjaW5uYW1v
+        biBwb3dkZXIiLCJtZXRhSW5mb3JtYXRpb24iOltdLCJpbWFnZSI6Imh0dHBz
+        Oi8vc3Bvb25hY3VsYXIuY29tL2Nkbi9pbmdyZWRpZW50c18xMDB4MTAwL2Np
+        bm5hbW9uLmpwZyJ9LHsiaWQiOjE5ODY4LCJhbW91bnQiOjEuNSwidW5pdCI6
+        ImN1cHMiLCJ1bml0TG9uZyI6ImN1cHMiLCJ1bml0U2hvcnQiOiJjIiwiYWlz
+        bGUiOiJCYWtpbmciLCJuYW1lIjoibm8gY2Fsb3JpZSBzd2VldGVuZXIiLCJv
+        cmlnaW5hbFN0cmluZyI6IjEgMS8yIGN1cHMgc3dlZXRlbmVyIChJIHVzZWQg
+        Q2FuZGFyZWwpIiwibWV0YUluZm9ybWF0aW9uIjpbIihJIHVzZWQgQ2FuZGFy
+        ZWwpIl0sImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vY2RuL2lu
+        Z3JlZGllbnRzXzEwMHgxMDAvc3VnYXItc3Vic3RpdHV0ZS5qcGcifSx7Imlk
+        IjoxMTY2MywiYW1vdW50IjowLjUsInVuaXQiOiJ0ZWFzcG9vbiIsInVuaXRM
+        b25nIjoidGVhc3Bvb25zIiwidW5pdFNob3J0IjoidCIsImFpc2xlIjoiSGVh
+        bHRoIEZvb2RzIiwibmFtZSI6ImFnYXIiLCJvcmlnaW5hbFN0cmluZyI6IjEv
+        MiB0ZWFzcG9vbiBhZ2FyLWFnYXIgcG93ZGVyIiwibWV0YUluZm9ybWF0aW9u
+        IjpbXSwiaW1hZ2UiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9jZG4vaW5n
+        cmVkaWVudHNfMTAweDEwMC93aGl0ZS1wb3dkZXIuanBnIn1dLCJ1c2VkSW5n
+        cmVkaWVudHMiOlt7ImlkIjo5MDAzLCJhbW91bnQiOjEuMCwidW5pdCI6InNl
+        cnZpbmciLCJ1bml0TG9uZyI6InNlcnZpbmciLCJ1bml0U2hvcnQiOiJzZXJ2
+        aW5nIiwiYWlzbGUiOiJQcm9kdWNlIiwibmFtZSI6ImFwcGxlIiwib3JpZ2lu
+        YWxTdHJpbmciOiJhcHBsZSIsIm1ldGFJbmZvcm1hdGlvbiI6W10sImltYWdl
+        IjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vY2RuL2luZ3JlZGllbnRzXzEw
+        MHgxMDAvYXBwbGUuanBnIn1dLCJsaWtlcyI6MX1d
     http_version: 
-  recorded_at: Wed, 21 Sep 2016 21:02:57 GMT
+  recorded_at: Thu, 22 Sep 2016 13:22:00 GMT
 recorded_with: VCR 3.0.3

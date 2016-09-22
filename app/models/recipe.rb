@@ -12,7 +12,7 @@ class Recipe < ApplicationRecord
     def where_ingredients(ingredients)
       cached_recipes = find_by_ingredients(ingredients.values)
       # USE RECIPES ALREADY IN DB TO LIMIT API CALLS
-      if cached_recipes.length == 5
+      if cached_recipes.length == 6
         cached_recipes
       else
         aggregate_recipe_data = search_service.recipe_match_api(ingredients)
@@ -22,11 +22,15 @@ class Recipe < ApplicationRecord
 
     def create_recipes(aggregate_recipe_data)
       aggregate_recipe_data.map do |recipe_data|
-        recipe = Recipe.create(
-          title: recipe_data['title'],
-          image: recipe_data['image'],
-          spoonacular_id: recipe_data['id']
-        )
+        if Recipe.find_by(spoonacular_id: recipe_data['id'])
+          recipe = Recipe.find_by(spoonacular_id: recipe_data['id'])
+        else
+          recipe = Recipe.create(
+            title: recipe_data['title'],
+            image: recipe_data['image'],
+            spoonacular_id: recipe_data['id']
+          )
+        end
         recipe.find_and_create_ingredients(recipe_data['missedIngredients']) if recipe_data['missedIngredients']
         recipe.find_and_create_ingredients(recipe_data['usedIngredients']) if recipe_data['usedIngredients']
         recipe
@@ -39,7 +43,7 @@ class Recipe < ApplicationRecord
         where('ingredients.name IN (?)',
               raw_ingredients.pluck('name')).
         distinct.
-        limit(5)
+        limit(6)
     end
   end
 
@@ -50,11 +54,13 @@ class Recipe < ApplicationRecord
   def find_and_create_ingredients(raw_ingredient_data)
     raw_ingredient_data.each do |raw_ingredient|
       ingredient = Ingredient.find_or_create(raw_ingredient)
-      recipe_ingredients.create(
-        ingredient: ingredient,
-        unit: raw_ingredient['unit'],
-        amount: raw_ingredient['amount']
-      )
+      if ingredient.valid?
+        recipe_ingredients.create(
+          ingredient: ingredient,
+          unit: raw_ingredient['unit'],
+          amount: raw_ingredient['amount']
+        )
+      end
     end
   end
 
